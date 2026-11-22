@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoàng Tuyền Residence — An cư một lần, yên ổn mãi mãi</title>
+<meta name="description" content="Căn hộ hạng sang 30 tầng, sở hữu lâu dài. Mở bán đợt cuối, chiết khấu đến 12%.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1b2a'/%3E%3Ctext x='16' y='21.5' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='15' fill='%23c9a45c'%3EHT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --d:0;--pt:0px;
+  --navy:#0d1b2a;--ivory:#f5efe3;--gold:#c9a45c;--goldd:#8a6a28;--pale:#d9dbd3;
+  --bd:clamp(0,(var(--d) - .25) / .75,1);
+  --bgb:color-mix(in srgb,#2a2c2d,#050505 calc(var(--bd) * 100%));
+  --ac:color-mix(in srgb,#c9a45c,#b7c4b0 calc(var(--bd) * 100%));
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Be Vietnam Pro',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{background:var(--navy);scroll-padding-top:76px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;font-family:var(--sans);font-size:16px;line-height:1.65;color:var(--navy);background:var(--ivory);overflow-x:clip}
+#wrap{overflow-x:clip}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0;padding:0}
+ul{list-style:none}
+a{color:inherit}
+svg{display:block;max-width:100%}
+[hidden]{display:none!important}
+:focus-visible{outline:2px solid var(--navy);outline-offset:2px;box-shadow:0 0 0 5px var(--gold)}
+.c{width:100%;max-width:1040px;margin:0 auto;padding:0 20px}
+.rule{display:block;width:64px;height:1px;background:var(--rl,var(--gold));margin:22px 0}
+.gl{position:relative;animation:gl .3s linear;text-shadow:2px 0 rgba(201,164,92,.7),-2px 0 rgba(120,160,150,.5)}
+@keyframes gl{0%{left:0}20%{left:-3px}40%{left:3px}60%{left:-2px}80%{left:2px}100%{left:0}}
+
+.promo{background:var(--navy);color:var(--gold);text-align:center;font-size:.68rem;letter-spacing:.06em;padding:7px 14px;line-height:1.5}
+header{position:sticky;top:0;z-index:50;background:rgba(245,239,227,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,164,92,.5);transition:background .6s,color .6s,border-color .6s}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;height:56px}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:600;font-size:.62rem;letter-spacing:.14em;line-height:1.3}
+.logo span{max-width:9.5em}
+.logo svg{width:30px;height:30px;flex:none}
+.logo rect{fill:var(--navy);stroke:var(--gold);transition:fill .6s}
+.logo text{font-family:var(--serif);font-weight:700;font-size:14px;fill:var(--gold)}
+nav{display:none;gap:30px}
+nav a{text-decoration:none;font-size:.85rem;font-weight:600}
+nav a:hover{color:var(--goldd)}
+.hd .btn{display:none}
+.btn{display:inline-block;font:600 .9rem/1 var(--sans);letter-spacing:.04em;text-decoration:none;padding:15px 26px;border:1px solid var(--navy);background:var(--navy);color:var(--ivory);cursor:pointer;border-radius:2px}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.sm{padding:11px 18px;font-size:.8rem}
+body.under header{background:rgba(8,9,9,.94);color:var(--pale);border-color:rgba(183,196,176,.25)}
+body.under .logo rect{fill:#050505;stroke:var(--ac)}
+body.under .logo text{fill:var(--ac)}
+body.under .hd .btn{background:transparent;color:var(--pale);border-color:var(--ac)}
+body.under nav a:hover{color:var(--ac)}
+
+.floor{position:relative;overflow:clip;padding:clamp(56px,10vw,112px) 0}
+.floor::before{content:attr(data-floor);position:absolute;top:8px;right:14px;font:700 clamp(5rem,24vw,12rem)/1 var(--serif);color:var(--acc);opacity:.09;pointer-events:none}
+.up{background:var(--ivory);color:var(--navy);--acc:var(--goldd);--rl:var(--gold)}
+.up.alt{background:#ece3cf}
+.bsmt{background:var(--bgb);color:var(--pale);--acc:var(--ac);--rl:var(--ac);min-height:80svh;display:flex;flex-direction:column;justify-content:center;border-top:1px solid color-mix(in srgb,var(--ac) 30%,transparent)}
+.bsmt .btn.ghost,.bsmt a{color:inherit}
+h1,h2{font-family:var(--serif);font-weight:700;line-height:1.12}
+h1{font-size:clamp(2.4rem,9.5vw,4.6rem)}
+h2{font-size:clamp(1.7rem,6vw,2.8rem)}
+.kick{font-size:.72rem;font-weight:600;letter-spacing:.22em;color:var(--acc);margin-bottom:18px}
+.lead,.floor p{max-width:34em}
+.big{font-family:var(--serif);font-weight:700;font-size:clamp(1.8rem,7vw,3.3rem);line-height:1.2;max-width:18em!important}
+.fine{font-size:.95rem;opacity:.8;margin-top:18px}
+.floor h2+p,.floor h2+.rule+p{margin-top:16px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.row{display:grid;gap:36px;align-items:center}
+.row>*{min-width:0}
+@media (min-width:860px){
+  .row{grid-template-columns:1fr 1fr;gap:64px}
+  .row.rev>:first-child{order:2}
+}
+
+.hero-grid{display:grid;gap:28px;align-items:center}
+.hero-v svg{width:100%;max-width:420px;max-height:470px;margin:0 auto}
+.facts{display:grid;grid-template-columns:1fr 1fr;margin-top:48px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.facts li{padding:22px 12px;text-align:center;border-left:1px solid rgba(201,164,92,.5)}
+.facts li:nth-child(odd){border-left:0}
+.facts li:nth-child(n+3){border-top:1px solid rgba(201,164,92,.5)}
+.facts b{display:block;font:700 clamp(1.6rem,5vw,2.2rem)/1.2 var(--serif)}
+.facts span{font-size:.8rem;letter-spacing:.06em}
+.hero{padding-bottom:clamp(40px,6vw,64px)}
+@media (min-width:860px){
+  .hero-grid{grid-template-columns:1.1fr .9fr;gap:48px}
+  .facts{grid-template-columns:repeat(4,1fr)}
+  .facts li{border-top:0!important;border-left:1px solid rgba(201,164,92,.5)!important}
+  .facts li:first-child{border-left:0!important}
+}
+#tower .s1{stop-color:#0d1b2a;transition:stop-color 3s}
+#tower .s2{stop-color:#1c3552;transition:stop-color 3s}
+#tower .s3{stop-color:#7a6168;transition:stop-color 3s}
+body.sunk #tower .s1{stop-color:#05080c}
+body.sunk #tower .s2{stop-color:#0a1118}
+body.sunk #tower .s3{stop-color:#161a1f}
+#tower .w{fill:#e8c777;transition:fill 2s}
+#tower .w.off{fill:#17293e}
+body.sunk #tower .w,body.sunk #tower .w.off{fill:#080c11}
+body.sunk #tower .w.keep{fill:#e8c777}
+#tower .fig{opacity:0;transition:opacity 2s 1.2s}
+body.sunk #tower .fig{opacity:1}
+#tower .moon{transition:opacity 3s}
+body.sunk #tower .moon{opacity:.25}
+
+.list{margin-top:22px;display:grid;gap:10px}
+.list li{padding-left:26px;position:relative}
+.list li::before{content:"";position:absolute;left:0;top:.7em;width:14px;height:1px;background:var(--gold)}
+.promoline{margin-top:22px;padding:12px 16px;border:1px solid var(--gold);font-size:.9rem;max-width:30em}
+.plan text{font:600 12px var(--sans);fill:var(--navy);text-anchor:middle}
+.plan .r{fill:rgba(255,255,255,.35);stroke:var(--navy);stroke-width:1.5}
+.pic{border:1px solid rgba(201,164,92,.6);padding:10px;background:rgba(255,255,255,.35)}
+
+.note{position:relative;max-width:400px;background:#f3ecd6;color:#2a2620;padding:26px 22px 20px;margin-top:30px;transform:rotate(var(--r,-1.2deg));box-shadow:0 10px 22px rgba(0,0,0,.28);border-radius:2px;font-size:.92rem;line-height:1.6}
+.note::before{content:"";position:absolute;top:-7px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e9d08a,#8a6a28);box-shadow:0 2px 3px rgba(0,0,0,.4)}
+.note .nh{font-size:.62rem;font-weight:600;letter-spacing:.18em;color:var(--navy);border-bottom:1px solid rgba(13,27,42,.3);padding-bottom:7px;margin-bottom:10px}
+.note p{max-width:none}
+.row>.note{justify-self:center}
+
+.card{background:#fbf8f0;border:1px solid var(--gold);padding:clamp(22px,5vw,40px);margin-top:56px;box-shadow:0 14px 34px rgba(13,27,42,.12);max-width:560px}
+.card h3{font:700 clamp(1.3rem,4.5vw,1.7rem)/1.25 var(--serif)}
+.card form{display:grid;gap:16px;margin-top:20px}
+.card label{display:grid;gap:6px;font-size:.82rem;font-weight:600;letter-spacing:.04em}
+.card input,.card select{font:400 1rem var(--sans);padding:12px;border:1px solid rgba(13,27,42,.35);background:#fff;color:var(--navy);border-radius:2px;width:100%}
+.card .btn{justify-self:start}
+#thanks{margin-top:16px;color:var(--goldd);font-weight:600}
+.lobby{padding-bottom:0}
+.ff{margin-top:clamp(56px,9vw,100px);background:var(--navy);color:var(--ivory);padding:44px 0 28px}
+.ff .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:28px 0}
+.ff .cols a{display:block;font-size:.88rem;text-decoration:none;opacity:.85;padding:5px 0}
+.ff .cols a:hover{color:var(--gold)}
+.ff .logo{font-size:.7rem}
+.ff small{display:block;font-size:.78rem;opacity:.7;border-top:1px solid rgba(201,164,92,.35);padding-top:18px}
+.still{background:#2a2c2d;color:#9aa096;text-align:center;font-size:.78rem;padding:26px 20px 30px}
+
+.exitwrap{position:relative;height:230px;max-width:420px;margin:0 auto;width:100%}
+.exit{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;background:#0a6b3a;color:#fff;font-weight:600;letter-spacing:.14em;font-size:.9rem;padding:10px 16px;border:2px solid #d7f0df;box-shadow:0 0 22px rgba(60,220,130,.45)}
+.exit svg{width:20px;height:24px;fill:#fff}
+.bays{position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(rgba(225,205,120,.5),rgba(225,205,120,.5)) bottom/100% 3px no-repeat,repeating-linear-gradient(100deg,transparent 0 58px,rgba(225,205,120,.5) 58px 62px);transform:perspective(420px) rotateX(48deg);transform-origin:bottom;-webkit-mask-image:linear-gradient(transparent,#000 55%);mask-image:linear-gradient(transparent,#000 55%)}
+@keyframes pulse{50%{opacity:.55}}
+.hl{animation:pulse 5s ease-in-out infinite}
+
+.doors7{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px;max-width:760px}
+@media (min-width:720px){.doors7{grid-template-columns:repeat(4,1fr)}}
+.door{display:block;padding:0;border:0;background:none;font:inherit;color:inherit;cursor:pointer;text-align:center}
+.frame{display:block;position:relative;aspect-ratio:3/5;background:#000;border:5px solid #1d1914;perspective:700px}
+.leaf{position:absolute;inset:0;background:linear-gradient(90deg,#3b2718,#2a1a0f);transform-origin:right center;transition:transform 4s ease-in-out;box-shadow:inset 0 0 0 7px rgba(0,0,0,.25)}
+.leaf::before{content:"";position:absolute;inset:14% 14% 40%;border:1px solid rgba(255,255,255,.08)}
+.leaf::after{content:"";position:absolute;inset:66% 14% 8%;border:1px solid rgba(255,255,255,.08)}
+.plate{position:absolute;top:9%;left:50%;transform:translateX(-50%);font:600 .6rem var(--sans);letter-spacing:.08em;padding:3px 6px;background:linear-gradient(#d9bd78,#8d6e30);color:#2a1d08;z-index:1}
+.peep{position:absolute;top:46%;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#000;box-shadow:0 0 0 2px #b8924a;z-index:1}
+.knob{position:absolute;top:58%;left:12%;width:8px;height:8px;border-radius:50%;background:#c9a45c;z-index:1}
+.door:hover .leaf{filter:brightness(1.15)}
+.door.shake .frame{animation:shk .35s}
+@keyframes shk{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+.d4.open .leaf{transform:rotateY(-22deg)}
+.d4{cursor:default}
+.d4:hover .leaf{filter:none}
+.ey{position:absolute;left:3%;top:42%;width:13%;aspect-ratio:1.7;border-radius:50%;background:#e4e8dc;opacity:0;transition:opacity 3s 1s;display:grid;place-items:center;animation:blink 6.5s infinite}
+.d4.open .ey{opacity:.92}
+.pu{width:42%;aspect-ratio:1;border-radius:50%;background:#050505;display:block}
+@keyframes blink{0%,91%,96%,100%{transform:scaleY(1)}93.5%{transform:scaleY(.08)}}
+#lockmsg{min-height:1.7em;margin-top:18px}
+.hand{font-family:'Segoe Script','Bradley Hand','Comic Sans MS',cursive;font-style:italic;font-size:1.3rem;margin-top:14px;color:var(--ac)}
+
+.crowd{display:flex;align-items:flex-end;margin:44px 0 0;max-width:760px;opacity:0;transition:opacity 5s ease-in}
+.crowd.seen{opacity:1}
+.fig{flex:1;position:relative;height:calc(var(--h,1) * clamp(190px,42vw,300px))}
+.fig+.fig{margin-left:-1px}
+.fig::before{content:"";position:absolute;top:0;left:50%;width:min(60%,34px);aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:#060606}
+.fig::after{content:"";position:absolute;top:26px;left:3%;right:3%;bottom:0;background:#060606;border-radius:45% 45% 0 0/10% 10% 0 0}
+.fig i{position:absolute;top:13px;width:4px;height:4px;border-radius:50%;background:#c9d0c4;opacity:.9;z-index:1}
+.fig i:first-child{left:calc(50% - 7px)}
+.fig i:last-child{left:calc(50% + 4px)}
+
+.end{background:#000!important;color:#e8e8e2;min-height:100svh;text-align:center;align-items:center;--acc:#b7c4b0;--rl:#b7c4b0}
+.end::before{display:none}
+.end .c{display:flex;flex-direction:column;align-items:center}
+.end h2{font-size:clamp(3.2rem,16vw,9rem);line-height:1}
+.end p{margin:22px auto 0}
+.spaced{font-size:.7rem;letter-spacing:.3em;color:#b7c4b0;margin-top:36px!important}
+.end .btn{margin-top:36px;border-color:#b7c4b0;color:#b7c4b0}
+.tiny{font-size:.7rem;opacity:.4;margin-top:60px!important;max-width:44em!important}
+
+#lift{position:fixed;z-index:100;right:12px;top:calc(var(--pt) + 9px);background:#060606;border:2px solid #2d2d2d;border-radius:6px;padding:4px 6px 4px 10px;color:#ffb000;font-family:ui-monospace,Consolas,'Courier New',monospace;box-shadow:0 2px 10px rgba(0,0,0,.4)}
+#lift .row1{display:flex;align-items:center;gap:8px}
+#lv{font-size:1.25rem;font-weight:700;min-width:3ch;text-align:right;text-shadow:0 0 7px rgba(255,176,0,.65);letter-spacing:.04em}
+#lift .ar{font-size:.8rem;text-shadow:0 0 6px rgba(255,176,0,.6);animation:pulse 2.4s ease-in-out infinite}
+#lift .lc{display:none;font-size:.6rem;letter-spacing:.12em;opacity:.8;padding:0 4px 3px 0}
+#snd{width:28px;height:28px;padding:0;border:1px solid #6b4a00;background:transparent;color:#ffb000;border-radius:4px;cursor:pointer;display:grid;place-items:center}
+#snd svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#snd .x{display:block}
+#snd[aria-pressed="true"] .x{display:none}
+#say{position:fixed;z-index:100;left:12px;bottom:12px;max-width:80vw;background:rgba(8,12,18,.9);color:var(--ivory);border:1px solid rgba(201,164,92,.6);border-radius:10px;padding:8px 14px;font-size:.8rem;line-height:1.4;opacity:0;transition:opacity .5s;pointer-events:none}
+#say.show{opacity:1}
+#fx{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:clamp(0,(var(--d) - .2) * 1.1,1);background-image:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.72) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#flick{position:fixed;inset:0;z-index:71;pointer-events:none;background:#000;opacity:0;transition:opacity .5s}
+.dr-wrap{position:fixed;inset:0;z-index:95;pointer-events:none;display:none}
+.dp{position:absolute;top:0;bottom:0;width:50%;background:repeating-linear-gradient(90deg,#8d9399 0 2px,#a7adb3 2px 5px,#7f858b 5px 7px);box-shadow:inset 0 0 40px rgba(0,0,0,.45);transition:transform 1.2s ease-in-out}
+.dp.l{left:0;transform:translateX(-100%);border-right:3px solid #444}
+.dp.r{right:0;transform:translateX(100%);border-left:3px solid #444}
+.dr-wrap.shut .dp{transform:none}
+
+@media (min-width:900px){
+  .hd{height:68px}
+  nav{display:flex}
+  .hd .btn{display:inline-block}
+  .logo{font-size:.78rem}
+  .logo span{max-width:none}
+  .promo{font-size:.75rem}
+  #lift{right:20px;top:calc(var(--pt) + 82px);padding:7px 8px 4px 14px}
+  #lift .lc{display:block}
+  #lv{font-size:1.7rem}
+  html{scroll-padding-top:88px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="wrap">
+<div class="promo">Mở bán đợt cuối · Chiết khấu đến 12% · Hỗ trợ lãi suất 0% trong 24 tháng</div>
+<header>
+  <div class="c hd">
+    <a class="logo" href="#f30">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="5"/><text x="16" y="21" text-anchor="middle">HT</text></svg>
+      <span>HOÀNG TUYỀN RESIDENCE</span>
+    </a>
+    <nav>
+      <a href="#f30" data-at="0.4" data-alt="Đi xuống">Tổng quan</a>
+      <a href="#f29" data-at="0.55" data-alt="Hầm">Tiện ích</a>
+      <a href="#f18" data-at="0.7" data-alt="Tầng không tên">Mặt bằng</a>
+      <a href="#form" data-at="0.8" data-alt="Không ai nghe máy">Liên hệ</a>
+    </nav>
+    <a class="btn sm gold" href="#form" data-at="0.85" data-alt="Nhận nhà">Nhận bảng giá</a>
+  </div>
+</header>
+
+<main>
+<section class="floor up hero" id="f30" data-floor="30" data-d="0" data-say="Tầng 30. Kính chào quý khách.">
+  <div class="c hero-grid">
+    <div>
+      <p class="kick">CĂN HỘ HẠNG SANG GIỮA LÒNG THÀNH PHỐ</p>
+      <h1 data-sunk="Bạn đã nhận nhà rồi.">An cư một lần, yên ổn mãi mãi.</h1>
+      <i class="rule"></i>
+      <p class="lead" data-sunk="Thang máy không lên nữa đâu. Mời quý cư dân về căn hộ của mình.">30 tầng căn hộ cao cấp, 3 tầng hầm đỗ xe, sở hữu lâu dài. Bàn giao hoàn thiện, dọn vào ở ngay.</p>
+      <div class="btns">
+        <a class="btn gold" href="#form">Nhận bảng giá</a>
+        <a class="btn ghost" href="#f29">Tham quan từng tầng ↓</a>
+      </div>
+    </div>
+    <div class="hero-v">
+      <svg id="tower" viewBox="0 0 400 540" aria-hidden="true">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop class="s1" offset="0"/><stop class="s2" offset=".6"/><stop class="s3" offset="1"/></linearGradient>
+          <mask id="mn"><rect width="400" height="540" fill="#fff"/><circle cx="327" cy="75" r="14" fill="#000"/></mask>
+        </defs>
+        <rect width="400" height="540" fill="url(#sky)"/>
+        <g fill="#f5efe3" opacity=".7"><circle cx="40" cy="50" r=".9"/><circle cx="90" cy="110" r=".7"/><circle cx="130" cy="30" r=".8"/><circle cx="270" cy="40" r=".7"/><circle cx="370" cy="150" r=".8"/><circle cx="60" cy="190" r=".6"/></g>
+        <circle class="moon" cx="320" cy="80" r="16" fill="#f5efe3" mask="url(#mn)"/>
+        <g fill="#0a1522"><rect x="0" y="400" width="72" height="125"/><rect x="62" y="445" width="76" height="80"/><rect x="262" y="420" width="70" height="105"/><rect x="322" y="458" width="78" height="67"/></g>
+        <g><rect class="w" x="10" y="412" width="5" height="7"/><rect class="w off" x="24" y="412" width="5" height="7"/><rect class="w" x="38" y="430" width="5" height="7"/><rect class="w" x="72" y="458" width="5" height="7"/><rect class="w off" x="272" y="434" width="5" height="7"/><rect class="w" x="290" y="434" width="5" height="7"/><rect class="w" x="340" y="472" width="5" height="7"/></g>
+        <path d="M200 18v28" stroke="#c9a45c" stroke-width="1"/>
+        <rect x="168" y="44" width="64" height="16" fill="#0f2236" stroke="#c9a45c" stroke-width=".5"/>
+        <rect x="150" y="60" width="100" height="462" fill="#0f2236" stroke="#c9a45c" stroke-width=".5"/>
+        <g id="wins"></g>
+        <rect class="w keep" x="191.5" y="245" width="15" height="12"/>
+        <g class="fig" fill="#050607"><circle cx="199" cy="249.4" r="2.5"/><path d="M193.5 257c0-5.5 2.5-6.2 5.5-6.2s5.5.7 5.5 6.2z"/></g>
+        <rect x="0" y="520" width="400" height="20" fill="#08111b"/>
+        <path d="M0 520h400" stroke="#c9a45c" stroke-width=".6"/>
+      </svg>
+    </div>
+  </div>
+  <div class="c">
+    <ul class="facts">
+      <li><b>30</b><span>tầng nổi</span></li>
+      <li><b>3</b><span>tầng hầm</span></li>
+      <li><b>412</b><span>căn hộ</span></li>
+      <li><b>Lâu dài</b><span>thời hạn sở hữu</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="floor up alt" id="f29" data-floor="29" data-d="0" data-say="Tầng 29. Hồ bơi và Sky Lounge.">
+  <div class="c row">
+    <div>
+      <h2>Hồ bơi vô cực &amp; Sky Lounge</h2>
+      <i class="rule"></i>
+      <p>Ngắm trọn thành phố từ độ cao 120 mét. Mở cửa 6:00 – 22:00 hằng ngày, dành riêng cho cư dân.</p>
+    </div>
+    <div class="pic">
+      <svg viewBox="0 0 480 300" aria-hidden="true">
+        <defs>
+          <linearGradient id="ps" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9cbe0"/><stop offset="1" stop-color="#f3e3c4"/></linearGradient>
+          <linearGradient id="pw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46b2c8"/><stop offset="1" stop-color="#0f5f7a"/></linearGradient>
+        </defs>
+        <rect width="480" height="300" fill="url(#ps)"/>
+        <path d="M0 150v-22h30v-14h22v30h20v-40h26v40h34v-18h24v18h40v-30h20v30h50v-16h28v16h40v-24h30v24h36v-12h30v12H480v0z" fill="#7b92a6" opacity=".7"/>
+        <rect y="150" width="480" height="110" fill="url(#pw)"/>
+        <path d="M0 150h480" stroke="#c9a45c" stroke-width="1.5"/>
+        <g stroke="#fff" stroke-width="1" opacity=".35"><path d="M30 175h90M180 188h120M340 172h100M60 210h140M260 222h160M20 240h80"/></g>
+        <rect y="260" width="480" height="40" fill="#e9dfc9"/>
+        <path d="M0 260h480" stroke="#c9a45c"/>
+        <g fill="#fbf8f0" stroke="#8a6a28" stroke-width=".8"><rect x="70" y="272" width="70" height="12" rx="3"/><rect x="170" y="272" width="70" height="12" rx="3"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="floor up" id="f18" data-floor="18" data-d="0.02" data-say="Tầng 18. Căn hộ mẫu.">
+  <div class="c row rev">
+    <div>
+      <h2>Căn hộ mẫu 2 phòng ngủ · 78 m²</h2>
+      <i class="rule"></i>
+      <p>Thiết kế thông thoáng, phòng nào cũng có cửa sổ. Nội thất liền tường, bếp từ, máy lạnh âm trần. Giá từ 4,2 tỷ.</p>
+      <ul class="list">
+        <li>Ban công hướng Đông Nam</li>
+        <li>Trần cao 3,1 m</li>
+        <li>Khóa cửa vân tay</li>
+      </ul>
+      <p class="promoline">Tặng nệm Yên Miên cho 50 khách đặt cọc đầu tiên.</p>
+    </div>
+    <div class="pic">
+      <svg class="plan" viewBox="0 0 400 300" aria-hidden="true">
+        <rect class="r" x="20" y="20" width="360" height="40"/>
+        <rect class="r" x="20" y="60" width="200" height="130"/>
+        <rect class="r" x="220" y="60" width="160" height="70"/>
+        <rect class="r" x="220" y="130" width="160" height="150"/>
+        <rect class="r" x="20" y="190" width="200" height="90"/>
+        <text x="200" y="45">Ban công</text>
+        <text x="120" y="130">Phòng khách</text>
+        <text x="300" y="100">Bếp</text>
+        <text x="300" y="210">Phòng ngủ 2</text>
+        <text x="120" y="240">Phòng ngủ 1</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="floor up alt" id="f12a" data-floor="12A" data-d="0.06" data-say="Tầng 12A.">
+  <div class="c row">
+    <div>
+      <h2>Khu vui chơi trẻ em &amp; phòng sinh hoạt cộng đồng</h2>
+      <i class="rule"></i>
+      <p>Không gian an toàn cho các bé, có bảo mẫu trông coi. Tòa nhà không có tầng 13: sau tầng 12 là tầng 12A.</p>
+    </div>
+    <aside class="note" style="--r:-1.4deg">
+      <p class="nh">THÔNG BÁO CỦA BAN QUẢN LÝ</p>
+      <p>Khu vui chơi đóng cửa lúc 20:00. Sau giờ này nếu vẫn nghe tiếng trẻ con chạy ngoài hành lang 12A, cư dân vui lòng không mở cửa.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="floor up" id="f5" data-floor="5" data-d="0.1" data-say="Tầng 5. Phòng tập và spa.">
+  <div class="c row rev">
+    <div>
+      <h2>Phòng gym, yoga &amp; spa</h2>
+      <i class="rule"></i>
+      <p>Máy móc nhập khẩu, có huấn luyện viên riêng. Mở cửa 5:00 – 23:00.</p>
+    </div>
+    <aside class="note" style="--r:1.1deg">
+      <p class="nh">THÔNG BÁO CỦA BAN QUẢN LÝ</p>
+      <p>Sau 23:00, gương phòng tập được phủ vải trắng. Cư dân vui lòng không tự ý gỡ ra.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="floor up alt lobby" id="fG" data-floor="G" data-d="0.18" data-say="Tầng trệt. Kính chào quý khách.">
+  <div class="c">
+    <div class="row">
+      <div>
+        <h2>Sảnh đón · Lễ tân 24/7</h2>
+        <i class="rule"></i>
+        <p>Sảnh cao 9 mét, lễ tân và bảo vệ túc trực cả ngày lẫn đêm.</p>
+      </div>
+      <aside class="note" style="--r:-.9deg">
+        <p class="nh">THÔNG BÁO CỦA BAN QUẢN LÝ</p>
+        <p>Thang máy số 4 chỉ đi xuống. Cư dân lên tầng vui lòng dùng thang khác.</p>
+      </aside>
+    </div>
+    <div class="card" id="form">
+      <h3>Đăng ký nhận bảng giá &amp; lịch xem nhà mẫu</h3>
+      <form id="reg">
+        <label>Họ và tên<input type="text" name="name" autocomplete="name"></label>
+        <label>Số điện thoại<input type="tel" name="tel" autocomplete="tel"></label>
+        <label>Loại căn quan tâm
+          <select name="type">
+            <option>1 phòng ngủ</option>
+            <option>2 phòng ngủ</option>
+            <option>3 phòng ngủ</option>
+            <option>Căn cuối hành lang</option>
+          </select>
+        </label>
+        <button class="btn gold" type="submit">Gửi đăng ký</button>
+      </form>
+      <p id="thanks" role="status" hidden>Cảm ơn quý khách. Căn của quý khách đã có sẵn, mời quý khách xuống nhận.</p>
+    </div>
+  </div>
+  <footer class="ff">
+    <div class="c">
+      <a class="logo" href="#f30">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="5"/><text x="16" y="21" text-anchor="middle">HT</text></svg>
+        <span>HOÀNG TUYỀN RESIDENCE</span>
+      </a>
+      <div class="cols">
+        <div><a href="#">Về dự án</a><a href="#">Tiến độ</a><a href="#">Tin tức</a></div>
+        <div><a href="#">Chính sách bán hàng</a><a href="#">Pháp lý</a><a href="#">Hỏi đáp</a></div>
+        <div><a href="#">Tuyển dụng</a><a href="#">Đối tác</a><a href="#">Báo chí</a></div>
+      </div>
+      <small>© Hoàng Tuyền Residence. Cảm ơn quý khách đã tham quan.</small>
+    </div>
+  </footer>
+  <p class="still">Thang vẫn đang xuống ↓</p>
+</section>
+
+<section class="floor bsmt" id="b1" data-floor="B1" data-d="0.3" data-say="Hầm B1. Thang đang đi xuống.">
+  <div class="c row">
+    <div>
+      <h2>Hầm B1 · Bãi đỗ xe máy</h2>
+      <i class="rule"></i>
+      <p>1.200 chỗ đỗ, camera giám sát 24/7, có trạm sạc xe điện.</p>
+    </div>
+    <div class="exitwrap">
+      <div class="bays" aria-hidden="true"></div>
+      <div class="exit">LỐI THOÁT <svg viewBox="0 0 20 24" aria-hidden="true"><path d="M7 0h6v12h7L10 24 0 12h7z"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="floor bsmt" id="b2" data-floor="B2" data-d="0.42" data-say="Hầm B2. Thang đang đi xuống.">
+  <div class="c row rev">
+    <div>
+      <h2>Hầm B2 · Bãi đỗ ô tô</h2>
+      <i class="rule"></i>
+      <p>Mỗi căn hộ một chỗ đỗ cố định.</p>
+      <aside class="note" style="--r:1.3deg">
+        <p class="nh">THÔNG BÁO CỦA BAN QUẢN LÝ</p>
+        <p>Xe ở ô số 44 đỗ từ năm 2019, đèn pha vẫn sáng. Ban quản lý đã gọi chủ xe nhiều lần nhưng không ai nghe máy. Cư dân vui lòng không lại gần.</p>
+      </aside>
+    </div>
+    <svg viewBox="0 0 480 270" aria-hidden="true">
+      <defs><radialGradient id="hg"><stop offset="0" stop-color="#fff3c4" stop-opacity=".8"/><stop offset="1" stop-color="#fff3c4" stop-opacity="0"/></radialGradient></defs>
+      <rect width="480" height="270" fill="#040505"/>
+      <g stroke="#b7c4b0" stroke-opacity=".2" fill="none">
+        <path d="M0 270L240 128M120 270L240 128M240 270V128M360 270L240 128M480 270L240 128"/>
+        <path d="M0 0L240 120M480 0L240 120" stroke-opacity=".12"/>
+        <path d="M60 205h360M105 174h270M140 156h200M170 145h140M195 138h90" stroke-opacity=".15"/>
+      </g>
+      <g fill="#0b0d0d"><rect x="40" y="60" width="26" height="210"/><rect x="150" y="96" width="14" height="150"/><rect x="316" y="96" width="14" height="150"/><rect x="414" y="60" width="26" height="210"/></g>
+      <g stroke="#b7c4b0" stroke-opacity=".35" stroke-width="2"><path d="M100 20h30M350 20h30M200 78h24M256 78h24"/></g>
+      <circle class="hl" cx="231" cy="130" r="14" fill="url(#hg)"/><circle class="hl" cx="251" cy="130" r="14" fill="url(#hg)"/>
+      <circle cx="231" cy="130" r="1.8" fill="#fff6d4"/><circle cx="251" cy="130" r="1.8" fill="#fff6d4"/>
+    </svg>
+  </div>
+</section>
+
+<section class="floor bsmt" id="b3" data-floor="B3" data-d="0.54" data-say="Hầm B3. Tầng cuối.">
+  <div class="c row">
+    <div>
+      <h2>Hầm B3 · Kỹ thuật &amp; kho</h2>
+      <i class="rule"></i>
+      <p>Phòng máy, bể nước, kho đồ của cư dân.</p>
+    </div>
+    <aside class="note" style="--r:-1.2deg">
+      <p class="nh">THÔNG BÁO CỦA BAN QUẢN LÝ</p>
+      <p>Nhân viên kỹ thuật ca đêm không xuống B3 một mình. Nếu có người mặc đồng phục bảo vệ vẫy tay gọi từ cuối hầm, đó không phải người của tòa nhà.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="floor bsmt" id="b4" data-floor="B4" data-d="0.66" data-say="Hầm B4. Thang đang đi xuống.">
+  <div class="c">
+    <h2>Hầm B4</h2>
+    <i class="rule"></i>
+    <p class="big">Tầng này không có trong bản vẽ.</p>
+    <p class="fine">Đêm nào đúng 3 giờ thang máy cũng dừng ở đây. Cửa mở, không ai bước ra.</p>
+  </div>
+</section>
+
+<section class="floor bsmt" id="b7" data-floor="B7" data-d="0.76" data-say="Hầm B7. Vui lòng không gõ cửa.">
+  <div class="c">
+    <h2>Hầm B7</h2>
+    <i class="rule"></i>
+    <p>Dưới này cũng có hành lang, cũng có số nhà. Cửa nào cũng khóa từ bên trong.</p>
+    <div class="doors7">
+      <button class="door" type="button"><span class="frame"><span class="leaf"><b class="plate">B7-01</b><i class="peep"></i><i class="knob"></i></span></span></button>
+      <button class="door" type="button"><span class="frame"><span class="leaf"><b class="plate">B7-02</b><i class="peep"></i><i class="knob"></i></span></span></button>
+      <button class="door" type="button"><span class="frame"><span class="leaf"><b class="plate">B7-03</b><i class="peep"></i><i class="knob"></i></span></span></button>
+      <div class="door d4" id="d4"><span class="frame"><span class="ey" aria-hidden="true"><i class="pu" id="pu"></i></span><span class="leaf"><b class="plate">B7-04</b><i class="peep"></i><i class="knob"></i></span></span></div>
+    </div>
+    <p id="lockmsg" role="status"></p>
+    <p class="hand">Ai gõ cũng đừng mở.</p>
+  </div>
+</section>
+
+<section class="floor bsmt" id="b13" data-floor="B13" data-d="0.86" data-say="Hầm B13. Có người đang đợi thang.">
+  <div class="c">
+    <h2>Hầm B13</h2>
+    <i class="rule"></i>
+    <p class="big">Tầng 13 của tòa nhà nằm ở đây.</p>
+    <p class="fine">Cư dân tầng này dọn đến từ trước khi tòa nhà khởi công.</p>
+    <div class="crowd" id="crowd" aria-hidden="true">
+      <span class="fig" style="--h:.97"><i></i><i></i></span><span class="fig" style="--h:1"><i></i><i></i></span><span class="fig" style="--h:.93"><i></i><i></i></span><span class="fig" style="--h:.99"><i></i><i></i></span><span class="fig" style="--h:.95"><i></i><i></i></span><span class="fig" style="--h:1"><i></i><i></i></span><span class="fig" style="--h:.96"><i></i><i></i></span>
+    </div>
+  </div>
+</section>
+
+<section class="floor bsmt" id="b49" data-floor="B49" data-d="0.94" data-say="Hầm B49. Sắp đến nơi.">
+  <div class="c">
+    <h2>Hầm B49</h2>
+    <i class="rule"></i>
+    <p class="big">Trên kia cúng 49 ngày xong rồi. Không còn ai gọi tên bạn nữa.</p>
+  </div>
+</section>
+
+<section class="floor bsmt end" id="end" data-floor="—" data-d="1" data-say="Đã đến nơi. Mời quý cư dân ra khỏi thang.">
+  <div class="c">
+    <h2>Đã đến nơi.</h2>
+    <p>Căn hộ của quý khách đã bàn giao lúc <span id="hm">--:--</span> hôm nay. Sở hữu lâu dài.</p>
+    <p class="spaced">HOÀNG TUYỀN RESIDENCE — AN CƯ NƠI CHÍN SUỐI</p>
+    <button class="btn ghost" type="button" id="up">Lên lại tầng trên</button>
+    <p class="tiny">© Hoàng Tuyền Residence. Dự án này là hư cấu. Không có tòa nhà nào, không có hầm B4. Nếu thang máy nhà bạn dừng ở tầng không ai bấm thì đừng nhìn ra.</p>
+  </div>
+</section>
+</main>
+</div>
+
+<div id="lift">
+  <div class="row1">
+    <span id="lv">30</span><span class="ar" aria-hidden="true">▼</span>
+    <button id="snd" type="button" aria-label="Bật âm thanh" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 9a4.5 4.5 0 0 1 0 6"/><path class="x" d="M17 8l5 8M22 8l-5 8"/></svg>
+    </button>
+  </div>
+  <div class="lc">THANG MÁY · ĐANG XUỐNG</div>
+</div>
+<div id="say" aria-live="polite"></div>
+<div id="fx" aria-hidden="true"></div>
+<div id="flick" aria-hidden="true"></div>
+<div class="dr-wrap" id="doors" aria-hidden="true"><div class="dp l"></div><div class="dp r"></div></div>
+
+<script>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const root=document.documentElement,body=document.body;
+const floors=$$('.floor'),firstB=floors.findIndex(f=>f.classList.contains('bsmt')),endIdx=floors.length-1;
+const lv=$('#lv'),say=$('#say'),promo=$('.promo');
+const rotEls=$$('[data-at]'),sunkEls=$$('[data-sunk]');
+let dNow=0,dMax=0,cur=-1,lowest=0,sunk=false,busy=false,timed=false,raf=0,sayT,baseTitle=document.title,promoH=promo.offsetHeight;
+
+(()=>{
+  let s=7;const rnd=()=>(s=s*16807%2147483647)/2147483647;let h='';
+  for(let r=0;r<30;r++)for(let c=0;c<8;c++){
+    if(r===12&&(c===3||c===4))continue;
+    h+=`<rect class="w${rnd()<.62?'':' off'}" x="${158+c*10.5}" y="${72+r*14.4}" width="7" height="9"/>`;
+  }
+  $('#wins').innerHTML=h;
+})();
+
+function swap(el,t){
+  el.textContent=t;
+  if(!rm){el.classList.add('gl');setTimeout(()=>el.classList.remove('gl'),300)}
+}
+const lab=()=>busy?'…':sunk?'B'+(49+Math.floor(Math.max(0,lowest-scrollY)/350)):floors[cur].dataset.floor;
+function refresh(){const t=lab();if(lv.textContent!==t)lv.textContent=t}
+
+function announce(){
+  say.textContent=sunk?'Thang đang đi xuống.':floors[cur].dataset.say;
+  say.classList.add('show');
+  clearTimeout(sayT);sayT=setTimeout(()=>say.classList.remove('show'),3500);
+}
+
+let ac,hum,o1,o2,soundOn=false,knockT;
+function audioInit(){
+  ac=new(window.AudioContext||window.webkitAudioContext)();
+  hum=ac.createGain();hum.connect(ac.destination);
+  [[60,.6],[120,.4]].forEach(([f,v],i)=>{
+    const o=ac.createOscillator(),g=ac.createGain();
+    o.type='sine';o.frequency.value=f;g.gain.value=v;o.connect(g).connect(hum);o.start();
+    if(i)o2=o;else o1=o;
+  });
+  setHum();
+}
+function setHum(){
+  if(!ac)return;const t=ac.currentTime;
+  hum.gain.setTargetAtTime(.03+.03*dNow,t,.3);
+  o1.frequency.setTargetAtTime(60*(1-.2*dNow),t,.3);
+  o2.frequency.setTargetAtTime(120*(1-.2*dNow),t,.3);
+}
+function tone(f,t0,dur,vol){
+  const o=ac.createOscillator(),g=ac.createGain();
+  o.type='sine';o.frequency.value=f;
+  g.gain.setValueAtTime(.0001,t0);
+  g.gain.exponentialRampToValueAtTime(vol,t0+.01);
+  g.gain.exponentialRampToValueAtTime(.0001,t0+dur);
+  o.connect(g).connect(ac.destination);o.start(t0);o.stop(t0+dur+.05);
+}
+function ding(){
+  if(!soundOn)return;const t=ac.currentTime;
+  tone(659.25,t,.7,.12);tone(523.25,t+.22,.9,.12);
+}
+function knock(){
+  const n=ac.sampleRate*.12|0,buf=ac.createBuffer(1,n,ac.sampleRate),a=buf.getChannelData(0);
+  for(let i=0;i<n;i++)a[i]=Math.random()*2-1;
+  for(let k=0;k<4;k++){
+    const t=ac.currentTime+k*.22,src=ac.createBufferSource(),lp=ac.createBiquadFilter(),g=ac.createGain();
+    src.buffer=buf;lp.type='lowpass';lp.frequency.value=240;
+    g.gain.setValueAtTime(.0001,t);
+    g.gain.exponentialRampToValueAtTime(.12,t+.008);
+    g.gain.exponentialRampToValueAtTime(.0001,t+.12);
+    src.connect(lp).connect(g).connect(ac.destination);src.start(t);
+  }
+}
+function nextKnock(){
+  clearTimeout(knockT);if(!soundOn)return;
+  knockT=setTimeout(()=>{if(soundOn&&dNow>=.7)knock();nextKnock()},8000+Math.random()*7000);
+}
+const snd=$('#snd');
+snd.addEventListener('click',()=>{
+  if(!ac){audioInit();soundOn=true;ac.resume()}
+  else if(soundOn){soundOn=false;ac.suspend()}
+  else{soundOn=true;ac.resume()}
+  snd.setAttribute('aria-pressed',soundOn);
+  snd.setAttribute('aria-label',soundOn?'Tắt âm thanh':'Bật âm thanh');
+  if(soundOn)nextKnock();else clearTimeout(knockT);
+});
+
+const flick=$('#flick');
+(function loop(){
+  if(rm)return;
+  flick.style.opacity=dNow>.35?(Math.random()*.1).toFixed(3):0;
+  setTimeout(loop,600+Math.random()*1400);
+})();
+
+function goSunk(){
+  if(sunk)return;
+  sunk=true;body.classList.add('sunk');
+  sunkEls.forEach(e=>swap(e,e.dataset.sunk));
+  document.title=baseTitle='Thang đang xuống';
+  refresh();
+}
+function ride(){
+  const dr=$('#doors');
+  dr.style.display='block';void dr.offsetWidth;dr.classList.add('shut');
+  setTimeout(()=>{busy=true;refresh()},1200);
+  setTimeout(()=>{busy=false;dr.classList.remove('shut');refresh()},2600);
+  setTimeout(()=>{dr.remove();goSunk()},3800);
+}
+
+function seen(el,min,cb){
+  const io=new IntersectionObserver(es=>{
+    const e=es[es.length-1];
+    if(e.isIntersecting&&(e.intersectionRatio>=min||e.intersectionRect.height>=innerHeight*min)){io.disconnect();cb()}
+  },{threshold:[0,.1,.2,.3,.4,.5,.6,.7,.8,.9,1]});
+  io.observe(el);
+}
+let endSeen=false;
+seen(floors[endIdx],.6,()=>{if(endSeen)return;endSeen=true;rm?goSunk():ride()});
+seen($('#crowd'),.3,()=>$('#crowd').classList.add('seen'));
+seen($('#b7'),.5,()=>setTimeout(()=>$('#d4').classList.add('open'),rm?0:3000));
+
+function update(){
+  raf=0;
+  const y=scrollY,mid=y+innerHeight/2;
+  const cs=floors.map(f=>{const r=f.getBoundingClientRect();return[y+r.top,y+r.bottom]});
+  let i=cs.findIndex(([a,b])=>mid>=a&&mid<b);
+  if(i<0)i=mid<cs[0][0]?0:endIdx;
+  const c=cs.map(([a,b])=>(a+b)/2),dv=floors.map(f=>+f.dataset.d);
+  let d;
+  if(mid<=c[0])d=dv[0];
+  else if(mid>=c[endIdx])d=dv[endIdx];
+  else{let k=0;while(mid>c[k+1])k++;d=dv[k]+(dv[k+1]-dv[k])*(mid-c[k])/(c[k+1]-c[k])}
+  dNow=d;dMax=Math.max(dMax,d);lowest=Math.max(lowest,y);
+  root.style.setProperty('--d',d.toFixed(3));
+  root.style.setProperty('--pt',Math.max(0,promoH-y)+'px');
+  if(i!==cur){cur=i;body.classList.toggle('under',i>=firstB);announce();ding()}
+  if(i===endIdx&&!timed){
+    timed=true;const t=new Date();
+    $('#hm').textContent=String(t.getHours()).padStart(2,'0')+':'+String(t.getMinutes()).padStart(2,'0');
+  }
+  for(const e of rotEls)if(!e.dataset.done&&dMax>=+e.dataset.at){e.dataset.done=1;swap(e,e.dataset.alt)}
+  refresh();setHum();
+}
+const queue=()=>{if(!raf)raf=requestAnimationFrame(update)};
+addEventListener('scroll',queue,{passive:true});
+addEventListener('resize',()=>{promoH=promo.offsetHeight;queue()});
+
+$('#reg').addEventListener('submit',e=>{e.preventDefault();$('#thanks').hidden=false});
+document.addEventListener('click',e=>{if(e.target.closest('a[href="#"]'))e.preventDefault()});
+$$('button.door').forEach(b=>b.addEventListener('click',()=>{
+  $('#lockmsg').textContent='Cửa khóa từ bên trong.';
+  b.classList.remove('shake');void b.offsetWidth;if(!rm)b.classList.add('shake');
+}));
+$('#up').addEventListener('click',()=>{goSunk();scrollTo({top:0,behavior:rm?'auto':'smooth'})});
+
+const pu=$('#pu');
+if(!rm)addEventListener('pointermove',e=>{
+  const r=pu.parentNode.getBoundingClientRect();
+  const dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),m=Math.hypot(dx,dy)||1,k=Math.min(1,m/200)*3;
+  pu.style.transform=`translate(${dx/m*k}px,${dy/m*k}px)`;
+},{passive:true});
+
+document.addEventListener('visibilitychange',()=>{
+  document.title=document.hidden&&dMax>.3?'Thang đang đợi bạn':baseTitle;
+});
+
+update();
+addEventListener('load',()=>{
+  promoH=promo.offsetHeight;
+  (document.fonts?document.fonts.ready:Promise.resolve()).then(()=>{
+    const q=new URLSearchParams(location.search),at=parseFloat(q.get('at'));
+    if(isNaN(at)){queue();return}
+    const go=v=>scrollTo({top:v,behavior:'instant'});
+    const wantSunk=q.get('sunk')==='1';
+    if(wantSunk)endSeen=true;
+    go(at*(document.documentElement.scrollHeight-innerHeight));update();
+    if(wantSunk){goSunk();go(0);update()}
+  });
+});
+})();
+</script>
+</body>
+</html>

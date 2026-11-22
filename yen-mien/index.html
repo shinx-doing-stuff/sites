@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nệm Yên Miên — Ngả lưng là ngủ, một giấc tới sáng</title>
+<meta name="description" content="Nệm 7 lớp êm mà không lún. Ngủ thử 100 đêm, bảo hành 10 năm, miễn phí vận chuyển toàn quốc.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231f6f6b'/%3E%3Ccircle cx='15' cy='16' r='9' fill='%23fbf7f0'/%3E%3Ccircle cx='19' cy='13' r='8' fill='%231f6f6b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>document.documentElement.className='js'</script>
+<style>
+:root{
+  --d:0;
+  --sick:clamp(0, var(--d) / 0.8, 1);
+  --bg:color-mix(in srgb,#fbf7f0,#cdc8b4 calc(var(--sick) * 100%));
+  --accent:color-mix(in srgb,#1f6f6b,#6b0f0f calc(var(--sick) * 100%));
+  --card:color-mix(in srgb,#ffffff,#e4dfcc calc(var(--sick) * 100%));
+  --ink:#1f2a37;
+  --r:calc(16px * (1 - var(--sick)));
+  --rb:calc(28px * (1 - var(--sick)));
+  --shadow:0 calc(4px + 16px * var(--sick)) calc(16px + 30px * var(--sick)) rgba(31,28,20,calc(.08 + .32 * var(--sick)));
+  --pale:#cfc6bd;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-padding-top:76px}
+:root:has(body.deep){background:#050303}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;font-family:'Be Vietnam Pro',system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--ink);background:var(--bg);letter-spacing:calc(var(--sick) * 0.04em);overflow-x:clip}
+#wrap{overflow-x:clip}
+[hidden]{display:none!important}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+img,svg{max-width:100%}
+.c{max-width:1120px;margin:0 auto;padding:0 20px}
+section{--tilt:0deg;transform:rotate(calc(var(--tilt) * var(--sick)));transition:transform .6s}
+.cm{padding:clamp(56px,9vw,104px) 0}
+h2{font-size:clamp(1.6rem,4.5vw,2.5rem);line-height:1.2;font-weight:800;text-align:center}
+.sub{text-align:center;margin:12px auto 0;max-width:560px;opacity:.8}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn{display:inline-block;border:2px solid var(--accent);background:var(--accent);color:#fff;font-weight:600;font-size:1rem;line-height:1;font-family:inherit;padding:15px 26px;border-radius:var(--rb);text-decoration:none;cursor:pointer;letter-spacing:inherit}
+.btn.alt{background:transparent;color:var(--accent)}
+.gl{position:relative;animation:gl .3s linear;text-shadow:2px 0 #b3121a,-1px 0 rgba(179,18,26,.6)}
+@keyframes gl{0%{left:0}20%{left:-3px}40%{left:3px}60%{left:-2px}80%{left:2px}100%{left:0}}
+
+.promo{background:var(--accent);color:#fff;text-align:center;font-size:.8rem;padding:8px 16px}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid rgba(31,42,55,.08)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;text-decoration:none}
+.logo svg{width:32px;height:32px}
+nav{display:none;gap:28px}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+header .btn{padding:11px 20px;font-size:.9rem}
+@media(min-width:820px){nav{display:flex}}
+body.deep header{background:#050303;border-color:#2a1d1d;color:var(--pale)}
+body.deep header .btn{background:transparent;border-color:var(--pale);color:var(--pale)}
+
+.hero{padding:clamp(32px,6vw,72px) 0}
+.hero .c{display:grid;gap:36px;align-items:center}
+.badge{display:inline-block;background:var(--card);box-shadow:var(--shadow);border-radius:var(--rb);padding:6px 14px;font-size:.85rem;font-weight:600;margin-bottom:18px}
+h1{font-size:clamp(2.1rem,7vw,3.7rem);line-height:1.12;font-weight:800}
+.hero p{margin-top:18px;font-size:1.1rem;max-width:520px;opacity:.85}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.art{width:100%;height:auto;display:block;border-radius:var(--r);box-shadow:var(--shadow)}
+@media(min-width:860px){.hero .c{grid-template-columns:1.05fr 1fr;gap:56px}}
+
+.cards{display:grid;gap:20px;margin-top:40px}
+@media(min-width:800px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:28px}
+.ico{width:56px;height:56px;border-radius:calc(28px * (1 - var(--sick)));background:color-mix(in srgb,var(--accent) 14%,transparent);display:grid;place-items:center;margin-bottom:16px}
+.ico svg{width:30px;height:30px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.2rem;font-weight:600;margin-bottom:8px}
+.card p{opacity:.8}
+
+.stats{padding:40px 0}
+.stats .c{display:grid;grid-template-columns:1fr 1fr;gap:24px;text-align:center}
+@media(min-width:800px){.stats .c{grid-template-columns:repeat(4,1fr)}}
+.num{font-size:clamp(2.2rem,8vw,3.4rem);font-weight:800;color:var(--accent);line-height:1.1;font-variant-numeric:tabular-nums}
+.lbl{font-size:.9rem;opacity:.8;margin-top:4px}
+
+.bands{max-width:680px;margin:40px auto 0;display:grid;gap:4px}
+.band{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:center;padding:16px 20px;border-radius:calc(14px * (1 - var(--sick)));background:var(--bc);filter:saturate(calc(1 - var(--sick) * .6))}
+.band i{font-style:normal;font-weight:800;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.7);display:grid;place-items:center}
+.band b{display:block;font-weight:600}
+.band span{font-size:.92rem;opacity:.8}
+.band.b8{--bc:#0c0808;color:var(--pale);opacity:0;transition:opacity 2s;filter:none;margin-top:8px}
+.band.b8.on{opacity:1}
+.band.b8 i{background:#2a1313;color:#a31515}
+
+.tl{list-style:none;margin:40px auto 0;padding:0 0 0 34px;max-width:620px;position:relative}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:3px;background:color-mix(in srgb,var(--accent) 30%,transparent)}
+.tl li{position:relative;padding-bottom:26px}
+.tl li::before{content:"";position:absolute;left:-34px;top:5px;width:20px;height:20px;border-radius:50%;background:var(--accent);border:4px solid var(--bg)}
+.tl b{display:block;font-weight:800;color:var(--accent)}
+.fine{max-width:620px;margin:0 auto;font-size:.85rem;opacity:.7}
+.gift{max-width:620px;margin:32px auto 0;background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:24px}
+.gift h3{font-size:1.1rem;font-weight:600}
+.gift p{opacity:.8;margin:6px 0 16px}
+
+.tgrid{display:grid;gap:22px;margin-top:40px}
+@media(min-width:900px){.tgrid{grid-template-columns:repeat(3,1fr)}}
+.t{--tilt:0deg;background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:24px;transform:rotate(calc(var(--tilt) * var(--sick)))}
+.t:nth-child(1){--tilt:-.8deg}.t:nth-child(2){--tilt:1.1deg}.t:nth-child(3){--tilt:-.5deg}
+.t:nth-child(4){--tilt:1.4deg}.t:nth-child(5){--tilt:-2.6deg}.t:nth-child(6){--tilt:3deg;background:radial-gradient(circle at 80% 90%,rgba(90,60,20,.28),transparent 45%),color-mix(in srgb,#e9e3d0,#b9ad8c calc(var(--sick) * 100%))}
+.who{display:flex;align-items:center;gap:12px}
+.av{width:46px;height:46px;border-radius:50%;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);display:grid;place-items:center;font-weight:800;flex:none}
+.t:nth-child(6) .av{background:#000}
+.who b{display:block;line-height:1.3}
+.who small{opacity:.7}
+.stars{margin-top:14px;color:#c28a1a;letter-spacing:.1em}
+.ver{font-size:.8rem;color:var(--accent);font-weight:600}
+.t blockquote{margin:12px 0 0}
+
+.faq{max-width:720px;margin:36px auto 0;display:grid;gap:12px}
+details{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow)}
+summary{cursor:pointer;list-style:none;padding:18px 54px 18px 22px;font-weight:600;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:1.4rem;color:var(--accent)}
+details[open] summary::after{content:"–"}
+details p{padding:0 22px 20px;opacity:.85}
+
+.ord{display:grid;gap:32px;align-items:center;margin-top:40px}
+@media(min-width:860px){.ord{grid-template-columns:1fr 1fr}}
+.price{text-align:center;font-weight:600;font-size:1.2rem;color:var(--accent);margin-top:10px}
+form{display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:600;font-size:.9rem}
+input,select{font:inherit;padding:13px 14px;border-radius:calc(12px * (1 - var(--sick)));border:1.5px solid rgba(31,42,55,.25);background:#fff;color:var(--ink);letter-spacing:inherit}
+#ok{margin-top:4px;font-weight:600;color:var(--accent)}
+.fade{height:60vh;background:linear-gradient(to bottom,transparent,#050303);position:relative;z-index:1;margin-top:-1px}
+
+#descent,#end{background:#050303;color:var(--pale);position:relative;transform:none}
+#descent{margin-top:-30px;padding-top:1px}
+#descent :focus-visible,#end :focus-visible{outline-color:var(--pale)}
+.ln{min-height:70vh;display:grid;place-items:center;padding:0 24px;text-align:center;position:relative;z-index:1}
+.ln p{font-size:calc(1.15rem + var(--i) * .22rem);font-weight:600;line-height:1.35;max-width:760px}
+@media(min-width:800px){.ln p{font-size:calc(1.5rem + var(--i) * .3rem)}}
+.js .ln p{opacity:0;transition:opacity 2s}
+.js .ln p.in{opacity:1}
+.ln:last-of-type p{color:#a31515}
+.eyes{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.ey{position:absolute;left:var(--x);top:var(--y);display:flex;gap:calc(var(--s) * .5);transform:translate(-50%,-50%) rotate(var(--r));opacity:.85;transition:opacity .8s}
+.ey.hd2{opacity:0}
+.ey i{width:var(--s);height:calc(var(--s) * .55);background:#d9d2c3;border-radius:50%;position:relative;overflow:hidden;transition:transform .12s}
+.ey.bl i{transform:scaleY(.08)}
+.ey b{position:absolute;left:50%;top:50%;width:44%;height:76%;background:#120808;border-radius:50%;transform:translate(calc(-50% + var(--px,0px)),calc(-50% + var(--py,0px)))}
+
+#end{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px 80px}
+#end h2{font-size:clamp(3rem,13vw,9rem);line-height:1.05;font-weight:800;color:var(--pale)}
+#end h2,#end .sig,#end .ghost{position:relative;z-index:1}
+.sig{margin-top:24px;font-size:.8rem;letter-spacing:.3em;opacity:.8}
+.ghost{margin-top:40px;background:transparent;border:1px solid var(--pale);color:var(--pale);font-weight:600;font-size:1rem;font-family:inherit;padding:14px 32px;border-radius:0;cursor:pointer}
+.ghost:hover{background:rgba(207,198,189,.1)}
+.foot{position:absolute;left:24px;right:24px;bottom:18px;font-size:.7rem;opacity:.35}
+
+#ov{position:fixed;inset:0;pointer-events:none;z-index:45;opacity:calc(var(--sick) * .55);background:radial-gradient(ellipse at center,transparent 35%,rgba(0,0,0,.9) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0 0 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#fl{position:fixed;inset:0;pointer-events:none;z-index:46;background:#000;opacity:0}
+body.flick #fl{animation:flick 16s linear infinite}
+@keyframes flick{0%,20%{opacity:0}21%,26%{opacity:.06}27%,32%{opacity:.02}33%,60%{opacity:0}61%,66%{opacity:.07}67%,72%{opacity:.03}73%,100%{opacity:0}}
+
+.cw{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.cp{width:min(280px,calc(100vw - 32px));background:#fff;color:var(--ink);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden;border:1px solid transparent}
+.ch{display:flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:10px 12px;font-weight:600;font-size:.9rem}
+.ch .dot{width:9px;height:9px;border-radius:50%;background:#3ddc84;flex:none}
+.ch b{flex:1;font-weight:600}
+.ch button{background:none;border:0;color:inherit;font-size:1.3rem;line-height:1;cursor:pointer;padding:2px 6px}
+.cl{padding:10px;display:grid;gap:6px;max-height:150px;overflow:auto;font-size:.85rem;line-height:1.4;letter-spacing:0}
+.m{background:#eef0f2;padding:7px 10px;border-radius:calc(12px * (1 - var(--sick)));justify-self:start;max-width:92%}
+.m.me{background:var(--accent);color:#fff;justify-self:end}
+.m.ty{font-style:italic;opacity:.6}
+.cf{display:flex;border-top:1px solid rgba(0,0,0,.1)}
+.cf input{flex:1;min-width:0;border:0;border-radius:0;padding:10px;font-size:.85rem;background:transparent}
+.cf button{border:0;background:none;color:var(--accent);font-weight:600;padding:0 12px;cursor:pointer;font-family:inherit}
+.lc{width:54px;height:54px;border-radius:50%;border:2px solid transparent;background:var(--accent);color:#fff;cursor:pointer;display:grid;place-items:center;box-shadow:var(--shadow)}
+.lc svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+body.deep .cp{background:#050303;color:var(--pale);border-color:var(--pale)}
+body.deep .ch{background:#120808;color:var(--pale)}
+body.deep .m{background:#1a1212}
+body.deep .m.me{background:#2a1313}
+body.deep .cf{border-color:#3a2a2a}
+body.deep .cf input,body.deep .cf button{color:var(--pale)}
+body.deep .lc{background:#050303;color:var(--pale);border-color:var(--pale)}
+body.deep .cw :focus-visible{outline-color:var(--pale)}
+
+.hero-art{--eyes:0;--night:0;--fig:0;--hand:0}
+body.woken .hero-art{--eyes:1;--night:1;--fig:1;--hand:1}
+.off{--lamp:0;--night:1;--eyes:1;--fig:0;--hand:0}
+.off.hand{--hand:1}
+
+.rules{max-width:680px;margin:36px auto 0;padding:28px 28px 28px 24px}
+.rules ol{margin:0;padding-left:1.6em;line-height:1.8}
+.rules li{padding-left:.3em}
+.rules li::marker{font-weight:600;color:var(--accent)}
+.rules li:nth-child(5){font-weight:500}
+.rules li:nth-child(6){font-weight:600}
+.rules li:nth-child(7){font-weight:700}
+.rules li:nth-child(8){font-weight:800;color:var(--accent)}
+
+#descent{overflow-x:clip}
+.fg{position:absolute;width:auto;aspect-ratio:100/480;color:#161010;pointer-events:none;z-index:0;transform:translateY(-50%)}
+.js .fg{opacity:0;transition:opacity 4s}
+.js .fg.in{opacity:1}
+.ey.big{--x:50%;--y:17%;--s:min(30vw,220px);--r:0deg;opacity:0;z-index:0}
+body.woken .ey.big{opacity:.75;transition:opacity 8s 3s}
+
+@media(prefers-reduced-motion:reduce){
+  section{transition:none}
+  .js .ln p,.band.b8,.js .fg{transition-duration:.01s}
+  body.woken .ey.big{transition:none}
+  body.flick #fl{animation:none}
+  .gl{animation:none;text-shadow:none}
+  .ey,.ey i{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="moon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="currentColor"/><circle cx="15" cy="16" r="9" fill="#fbf7f0"/><circle cx="19" cy="13" r="8" fill="currentColor"/></symbol>
+  <symbol id="room" viewBox="0 0 400 270">
+    <defs><radialGradient id="gl"><stop offset="0" stop-color="#ffd98a" stop-opacity=".95"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient></defs>
+    <rect width="400" height="270" fill="#dcebe8"/>
+    <rect y="240" width="400" height="30" fill="#c8b596"/>
+    <rect y="238" width="400" height="3" fill="#b09c7d"/>
+    <rect x="36" y="34" width="104" height="92" rx="6" fill="#1b2a47" stroke="#fbf7f0" stroke-width="6"/>
+    <circle cx="62" cy="62" r="13" fill="#f6e7a8"/><circle cx="68" cy="57" r="11" fill="#1b2a47"/>
+    <circle cx="110" cy="50" r="1.8" fill="#fff"/><circle cx="122" cy="100" r="1.5" fill="#fff"/><circle cx="102" cy="104" r="1.3" fill="#fff"/><circle cx="52" cy="104" r="1.5" fill="#fff"/><circle cx="116" cy="66" r="1.2" fill="#fff"/>
+    <path d="M88 34v92M36 80h104" stroke="#fbf7f0" stroke-width="4"/>
+    <rect x="96" y="176" width="58" height="64" rx="3" fill="#a98764"/>
+    <rect x="102" y="188" width="46" height="20" rx="2" fill="none" stroke="#8a6b4d" stroke-width="2"/>
+    <circle cx="125" cy="198" r="2.5" fill="#5b4a3c"/>
+    <rect x="114" y="168" width="22" height="8" rx="3" fill="#5b4a3c"/>
+    <rect x="123" y="148" width="4" height="20" fill="#5b4a3c"/>
+    <path d="M108 148L142 148L134 122L116 122Z" fill="#f3d089"/>
+    <circle cx="125" cy="140" r="72" fill="url(#gl)" style="opacity:calc(var(--lamp,1) * (1 - var(--sick,0)) * .8)"/>
+    <rect x="170" y="112" width="16" height="128" rx="6" fill="#7d5c46"/>
+    <rect x="176" y="190" width="200" height="12" rx="3" fill="#8f6c52"/>
+    <rect x="186" y="202" width="188" height="38" fill="#120c10"/>
+    <rect x="178" y="202" width="10" height="38" fill="#7d5c46"/>
+    <rect x="364" y="202" width="10" height="38" fill="#7d5c46"/>
+    <rect x="182" y="154" width="192" height="38" rx="10" fill="#fdfaf3"/>
+    <rect x="192" y="138" width="52" height="22" rx="11" fill="#fff" stroke="#e2dccd" stroke-width="2"/>
+    <rect x="250" y="146" width="124" height="46" rx="10" style="fill:var(--accent,#1f6f6b)"/>
+    <rect x="250" y="160" width="124" height="6" fill="#fff" opacity=".25"/>
+    <rect width="400" height="270" fill="#05060d" style="opacity:calc(var(--night,0) * .72);transition:opacity 3s"/>
+    <g style="opacity:var(--eyes,0);transition:opacity 3s">
+      <ellipse cx="270" cy="222" rx="6" ry="3.5" fill="#eee6c8"/><ellipse cx="292" cy="222" rx="6" ry="3.5" fill="#eee6c8"/>
+      <circle cx="270" cy="222" r="1.8" fill="#120c10"/><circle cx="292" cy="222" r="1.8" fill="#120c10"/>
+    </g>
+    <g style="opacity:var(--fig,0);transition:opacity 4s"><ellipse cx="114" cy="92" rx="9" ry="12" fill="#05060a"/><path d="M96 126c0-14 8-20 18-20s18 6 18 20z" fill="#05060a"/><circle cx="110.5" cy="91" r="1.3" fill="#e8e0c0"/><circle cx="117.5" cy="91" r="1.3" fill="#e8e0c0"/></g>
+    <g style="opacity:var(--hand,0);transition:opacity 3s" fill="#b9b3a2"><rect x="318" y="186" width="5" height="17" rx="2.5"/><rect x="325" y="184" width="5" height="19" rx="2.5"/><rect x="332" y="185" width="5" height="18" rx="2.5"/><rect x="339" y="188" width="5" height="15" rx="2.5"/></g>
+  </symbol>
+  <symbol id="fig" viewBox="0 0 100 480"><ellipse cx="50" cy="30" rx="15" ry="22" fill="currentColor"/><path fill="currentColor" d="M41 48h18l2 14c18 4 27 16 29 38l4 232c0 9-11 9-11 0l-5-196-2 344H24l-2-344-5 196c0 9-11 9-11 0l4-232c2-22 11-34 29-38z"/><circle cx="44" cy="28" r="1.6" fill="#bdb6a6"/><circle cx="56" cy="28" r="1.6" fill="#bdb6a6"/></symbol>
+</svg>
+<div id="ov" aria-hidden="true"></div>
+<div id="fl" aria-hidden="true"></div>
+<div id="wrap">
+<div class="promo" data-woke="Ngủ thử 100 đêm · Đêm nay là đêm thứ 101 của bạn">Miễn phí vận chuyển toàn quốc · Ngủ thử 100 đêm · Bảo hành 10 năm</div>
+<header>
+  <div class="c hd">
+    <a class="logo" href="#top"><svg viewBox="0 0 32 32" aria-hidden="true" style="color:var(--accent)"><use href="#moon"/></svg>Yên Miên</a>
+    <nav>
+      <a href="#benefits" data-at="0.35" data-alt="Nó">Sản phẩm</a>
+      <a href="#tech" data-at="0.5" data-alt="Dưới gầm giường">Công nghệ</a>
+      <a href="#reviews" data-at="0.6" data-alt="Người nằm trước">Đánh giá</a>
+      <a href="#faq" data-at="0.7" data-alt="Đừng hỏi">Hỏi đáp</a>
+    </nav>
+    <a class="btn" href="#order" data-at="0.8" data-alt="Nằm xuống đi">Mua ngay</a>
+  </div>
+</header>
+
+<section id="top" class="hero" data-d="0" style="--tilt:.6deg">
+  <div class="c">
+    <div>
+      <span class="badge">★ 4,9/5 · 12.408 lượt đánh giá</span>
+      <h1 data-woke="Bạn vẫn chưa tỉnh đâu.">Ngả lưng là ngủ, một giấc tới sáng.</h1>
+      <p data-woke="Bạn kéo hết trang rồi, bấm nút rồi, mà vẫn đang nằm đây. Nệm nhớ dáng nằm của bạn rồi. Nó không quên đâu.">Nệm Yên Miên 7 lớp, êm mà không lún, nâng đỡ cột sống suốt đêm. Hơn 12.000 gia đình Việt đã tin dùng.</p>
+      <div class="cta">
+        <a class="btn" href="#benefits" data-woke="Nằm im">Xem sản phẩm</a>
+        <a class="btn alt" href="#trial" data-woke="Nhắm mắt lại đi">Đăng ký ngủ thử 100 đêm</a>
+      </div>
+    </div>
+    <svg class="art hero-art" viewBox="0 0 400 270" aria-hidden="true"><use href="#room"/></svg>
+  </div>
+</section>
+
+<section id="benefits" class="cm" data-d="0" style="--tilt:-.9deg">
+  <div class="c">
+    <h2>Vì sao hơn 12.000 gia đình tin chọn Yên Miên?</h2>
+    <div class="cards">
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/></svg></div><h3>Êm mà không lún</h3><p>7 lớp vật liệu ôm theo đường cong cơ thể, nâng đỡ cột sống dù bạn nằm ngửa hay nằm nghiêng.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h8a3 3 0 1 1-3 3"/></svg></div><h3>Mát cả đêm</h3><p>Vải sợi tre thoáng khí, thoát ẩm nhanh. Trời nóng mấy nằm cũng không bí lưng.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></div><h3>Yên tĩnh tuyệt đối</h3><p>Lò xo túi độc lập, người bên cạnh trở mình cả đêm bạn cũng không hay biết.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="stats" data-d="0.05" style="--tilt:1.2deg">
+  <div class="c">
+    <div><div class="num" id="count">12.408</div><div class="lbl" data-woke="người đang ngủ trên nệm Yên Miên, tính cả bạn">người đang ngủ trên nệm Yên Miên</div></div>
+    <div><div class="num">100</div><div class="lbl">đêm ngủ thử</div></div>
+    <div><div class="num">10</div><div class="lbl">năm bảo hành</div></div>
+    <div><div class="num">0</div><div class="lbl">khách trả hàng</div></div>
+  </div>
+</section>
+
+<section id="tech" class="cm" data-d="0.15" style="--tilt:-1.1deg">
+  <div class="c">
+    <h2>Cấu tạo 7 lớp</h2>
+    <p class="sub">Mỗi lớp một việc, tất cả để bạn ngon giấc.</p>
+    <div class="bands">
+      <div class="band" style="--bc:#f4e9d8"><i>1</i><div><b>Vỏ sợi tre</b><span>Mềm, thoáng, kháng khuẩn tự nhiên.</span></div></div>
+      <div class="band" style="--bc:#cfe6e3"><i>2</i><div><b>Lớp gel làm mát</b><span>Tản nhiệt nhanh, không bí lưng.</span></div></div>
+      <div class="band" style="--bc:#f1ddc4"><i>3</i><div><b>Cao su thiên nhiên</b><span>Đàn hồi tốt, nằm bao năm vẫn không xẹp.</span></div></div>
+      <div class="band" style="--bc:#e3d8ef"><i>4</i><div><b>Mút hoạt tính (memory foam)</b><span data-at="0.4" data-alt="Nhớ dáng nằm của bạn. Nhớ cả dáng người nằm trước bạn.">Ôm theo dáng nằm của bạn.</span></div></div>
+      <div class="band" style="--bc:#d9e4cf"><i>5</i><div><b>Lò xo túi độc lập</b><span>Người này trở mình, người kia vẫn ngủ yên.</span></div></div>
+      <div class="band" style="--bc:#ead7cf"><i>6</i><div><b>Lớp đệm đỡ lưng</b><span>Giữ cột sống thẳng, sáng dậy không ê ẩm.</span></div></div>
+      <div class="band" style="--bc:#c9ced6"><i>7</i><div><b>Đế chống trượt</b><span>Nệm nằm yên một chỗ suốt đêm.</span></div></div>
+      <div class="band b8" id="b8"><i>8</i><div><b>██████</b><span>Lớp này không có trong bản vẽ. Xin quý khách đừng rạch nệm ra xem.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="trial" class="cm" data-d="0.3" style="--tilt:.8deg">
+  <div class="c">
+    <h2>Ngủ thử 100 đêm tại nhà</h2>
+    <p class="sub">Nằm không ưng? Yên Miên đến tận nhà thu hồi, hoàn tiền 100%.</p>
+    <ol class="tl">
+      <li><b>Đêm 1</b>Đặt lưng 12 phút là ngủ.</li>
+      <li><b>Đêm 7</b>Ngủ một mạch tới sáng, không trở mình lần nào.</li>
+      <li><b>Đêm 30</b>Ngủ không còn mộng mị gì nữa.</li>
+      <li><b>Đêm 60</b>Chuông báo thức reo, bạn không nghe thấy.</li>
+      <li><b>Đêm 100</b>Bạn không cần dậy nữa.</li>
+    </ol>
+    <p class="fine">Đến nay chưa có khách nào xin trả hàng. Cũng chưa có khách nào gọi lại.</p>
+    <div class="gift">
+      <h3>Tặng kèm: Nhạc ru ngủ Yên Miên</h3>
+      <p>Bật lên, nhắm mắt lại, phần còn lại để nệm lo.</p>
+      <button class="btn" id="play" type="button">▶ Nghe thử</button>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="cm" data-d="0.42" style="--tilt:-1.3deg">
+  <div class="c">
+    <h2>Khách hàng nói gì về Yên Miên?</h2>
+    <div class="tgrid">
+      <div class="t"><div class="who"><div class="av">TH</div><div><b>Chị Thu Hà</b><small>Hà Nội</small></div></div><div class="stars">★★★★★</div><div class="ver">✓ Đã mua hàng</div><blockquote>Mẹ mình đau lưng mấy năm nay, nằm nệm này được hai tuần thấy đỡ hẳn. Giao hàng nhanh, các bạn nhân viên nhiệt tình. Sẽ ủng hộ dài dài.</blockquote></div>
+      <div class="t"><div class="who"><div class="av">MQ</div><div><b>Anh Minh Quân</b><small>Đà Nẵng</small></div></div><div class="stars">★★★★★</div><div class="ver">✓ Đã mua hàng</div><blockquote>Nệm êm, không bí lưng. Vợ mình trở mình cả đêm mà mình không hay biết gì luôn. Đáng tiền.</blockquote></div>
+      <div class="t"><div class="who"><div class="av">BN</div><div><b>Cô Bích Ngọc</b><small>Cần Thơ</small></div></div><div class="stars">★★★★★</div><div class="ver">✓ Đã mua hàng</div><blockquote>Nằm ngủ một mạch tới sáng. Có bữa nghe như ai thở đều đều ngay dưới lưng, mà nghe riết cũng quen, dễ ngủ lắm.</blockquote></div>
+      <div class="t"><div class="who"><div class="av">Đ</div><div><b>Anh Đức</b><small>TP. Hồ Chí Minh</small></div></div><div class="stars">★★★★★</div><div class="ver">✓ Đã mua hàng</div><blockquote>Vợ mình kể đêm nào đúng 3 giờ mình cũng ngồi bật dậy, mắt mở trừng trừng, cúi nhìn xuống gầm giường. Mình thì chẳng nhớ gì hết. Nói chung ngủ ngon, 5 sao.</blockquote></div>
+      <div class="t"><div class="who"><div class="av">N</div><div><b>Bé Na</b><small>6 tuổi</small></div></div><div class="stars">★★★★★</div><div class="ver">✓ Đã mua hàng</div><blockquote>Cô ở dưới nệm dặn con đừng kể với mẹ.</blockquote></div>
+      <div class="t"><div class="who"><div class="av"></div><div><b>—</b></div></div><div class="stars">●●●●●</div><div class="ver">✓ Đã mua hàng · 100 đêm trước</div><blockquote>tôi vẫn đang ngủ tôi vẫn đang ngủ tôi vẫn đang ngủ ai gọi tôi dậy với</blockquote></div>
+    </div>
+  </div>
+</section>
+
+<section id="rules" class="cm" data-d="0.52" style="--tilt:.9deg">
+  <div class="c">
+    <h2>Lưu ý khi sử dụng</h2>
+    <p class="sub">Để nệm bền, giấc ngủ ngon, quý khách lưu ý giúp:</p>
+    <div class="card rules">
+      <ol>
+        <li>Xoay đầu nệm 3 tháng một lần để nệm lún đều.</li>
+        <li>Không giặt vỏ nệm bằng nước nóng.</li>
+        <li>Không kê giường đối diện gương.</li>
+        <li>Khi ngủ không để tay chân thò ra ngoài mép nệm.</li>
+        <li>Nửa đêm nghe ai gọi tên mình thì đừng thưa.</li>
+        <li>Thấy nệm lún xuống bên cạnh thì cứ nằm im, đừng quay sang.</li>
+        <li>Bị bóng đè thì đừng cố mở mắt. Nệm đang đo người quý khách.</li>
+        <li>Sau 12 giờ đêm, tuyệt đối không cúi xuống nhìn gầm giường.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="cm" data-d="0.62" style="--tilt:1.5deg">
+  <div class="c">
+    <h2>Câu hỏi thường gặp</h2>
+    <div class="faq">
+      <details open><summary>Nệm mới bóc có mùi không?</summary><p>Nệm mới có mùi cao su nhẹ, để thoáng 1–2 ngày là hết. Nếu sau đó vẫn còn mùi đất ẩm thì cũng bình thường ạ.</p></details>
+      <details><summary>Đêm nằm tôi nghe có tiếng thở đều đều trong nệm, có sao không?</summary><p>Dạ không sao ạ. Nệm đang làm quen với quý khách. Quý khách cứ thở theo nhịp đó là dễ ngủ.</p></details>
+      <details><summary>Tôi ngủ một mình, sao sáng dậy bên cạnh lại có thêm một chỗ lún?</summary><p>Mút hoạt tính nhớ dáng của tất cả những ai từng nằm lên nó.</p></details>
+      <details><summary>Tôi có nên soi gầm giường không?</summary><p>Không.</p></details>
+      <details><summary>Tôi muốn trả nệm thì làm thế nào?</summary><p>Quý khách không trả được đâu ạ. Mời quý khách hỏi câu khác.</p></details>
+      <details id="q6"><summary>Ai đang trả lời mấy câu hỏi này vậy?</summary><p id="q6a">Bây giờ là --:--. Tối nào bạn đi ngủ lúc mấy giờ, bên này đều biết.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="order" class="cm" data-d="0.76" style="--tilt:.3deg">
+  <div class="c">
+    <h2>Đặt nệm ngay hôm nay</h2>
+    <p class="price" data-at="0.72" data-alt="Bạn trả rồi mà">Chỉ từ 6.990.000₫ · Trả góp 0%</p>
+    <div class="ord">
+      <svg class="art off" viewBox="0 0 400 270" aria-hidden="true"><use href="#room"/></svg>
+      <form id="f">
+        <label>Họ và tên<input name="n" type="text" autocomplete="off"></label>
+        <label>Số điện thoại<input name="p" type="tel" autocomplete="off"></label>
+        <label>Địa chỉ nhận hàng<input id="addr" name="a" type="text" autocomplete="off"></label>
+        <label>Kích thước<select name="s"><option>1m6 × 2m</option><option>1m8 × 2m</option><option>Vừa khít người bạn</option></select></label>
+        <div><button class="btn" type="submit">Đặt hàng</button><p id="ok" role="status"></p></div>
+      </form>
+    </div>
+  </div>
+</section>
+<div class="fade" aria-hidden="true"></div>
+
+<section id="descent" data-d="0.9">
+  <div class="eyes" aria-hidden="true">
+    <div class="ey" style="--x:12%;--y:14%;--s:22px;--r:-6deg"><i><b></b></i><i><b></b></i></div>
+    <div class="ey" style="--x:84%;--y:29%;--s:16px;--r:7deg"><i><b></b></i><i><b></b></i></div>
+    <div class="ey" style="--x:9%;--y:43%;--s:28px;--r:4deg"><i><b></b></i><i><b></b></i></div>
+    <div class="ey" style="--x:88%;--y:57%;--s:20px;--r:-9deg"><i><b></b></i><i><b></b></i></div>
+    <div class="ey" style="--x:14%;--y:71%;--s:34px;--r:-3deg"><i><b></b></i><i><b></b></i></div>
+    <div class="ey" style="--x:80%;--y:71%;--s:14px;--r:10deg"><i><b></b></i><i><b></b></i></div>
+    <div class="ey" style="--x:86%;--y:86%;--s:40px;--r:5deg"><i><b></b></i><i><b></b></i></div>
+    <div class="ey" style="--x:10%;--y:86%;--s:26px;--r:-7deg"><i><b></b></i><i><b></b></i></div>
+  </div>
+  <svg class="fg" style="left:8%;top:36%;height:20vh" aria-hidden="true"><use href="#fig"/></svg>
+  <svg class="fg" style="right:6%;top:62%;height:46vh" aria-hidden="true"><use href="#fig"/></svg>
+  <svg class="fg" style="right:-8%;top:84%;height:105vh" aria-hidden="true"><use href="#fig"/></svg>
+  <div class="ln"><p style="--i:0">Bạn vẫn còn lướt xuống à.</p></div>
+  <div class="ln"><p style="--i:1">Dưới này hết thứ để bán rồi.</p></div>
+  <div class="ln"><p style="--i:2">Chỉ còn gầm giường thôi.</p></div>
+  <div class="ln"><p style="--i:3">Nệm nào rồi cũng phải có người nằm.</p></div>
+  <div class="ln"><p style="--i:4">Nệm của bạn giao từ lâu rồi.</p></div>
+  <div class="ln"><p style="--i:5">Bạn đang nằm trên nó đấy.</p></div>
+  <div class="ln"><p style="--i:6">Từ hôm đó tới giờ, bạn đã dậy lần nào đâu.</p></div>
+</section>
+
+<section id="end" data-d="1">
+  <div class="eyes" aria-hidden="true">
+    <div class="ey big"><i><b></b></i><i><b></b></i></div>
+  </div>
+  <h2>Ngủ ngon nhé.</h2>
+  <p class="sig">YÊN MIÊN — YÊN NGHỈ MIÊN VIỄN</p>
+  <button class="ghost" id="wake" type="button">Tỉnh dậy</button>
+  <p class="foot">© Yên Miên. Trang web này là hư cấu. Không có cái nệm nào hết. Dưới gầm giường cũng không có ai. Đừng cúi xuống xem.</p>
+</section>
+</div>
+
+<div class="cw">
+  <div class="cp" id="cp" role="dialog" hidden>
+    <div class="ch"><span class="dot"></span><b><span data-at="0.9" data-alt="Không phải Mai"><span data-at="0.7" data-alt="Mai">Mai · Tư vấn viên</span></span></b><button type="button" id="cx" aria-label="×">×</button></div>
+    <div class="cl" id="cl" aria-live="polite"></div>
+    <form class="cf" id="cf"><input id="ci" type="text" placeholder="Nhập tin nhắn…" autocomplete="off" aria-label="Nhập tin nhắn…"><button type="submit" aria-label="Gửi">➤</button></form>
+  </div>
+  <button class="lc" id="lc" type="button" aria-label="Chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></button>
+</div>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const root=document.documentElement,body=document.body;
+const secs=$$('section[data-d]'),ats=$$('[data-at]'),descent=$('#descent'),eyes=$$('.ey');
+let d=0,dMax=0,woken=false,raf=0,mouse=null;
+const hm=()=>{const t=new Date();return String(t.getHours()).padStart(2,'0')+':'+String(t.getMinutes()).padStart(2,'0')};
+
+function swap(el,t){
+  el.textContent=t;
+  if(rm)return;
+  el.classList.remove('gl');void el.offsetWidth;el.classList.add('gl');
+  setTimeout(()=>el.classList.remove('gl'),300);
+}
+
+function calc(){
+  if(scrollY+innerHeight>=root.scrollHeight-2)return 1;
+  const c=scrollY+innerHeight/2;
+  const p=secs.map(s=>{const r=s.getBoundingClientRect();return[r.top+scrollY+r.height/2,+s.dataset.d]});
+  if(c<=p[0][0])return p[0][1];
+  for(let i=1;i<p.length;i++){
+    if(c<=p[i][0]){const t=(c-p[i-1][0])/(p[i][0]-p[i-1][0]);return p[i-1][1]+t*(p[i][1]-p[i-1][1])}
+  }
+  return p[p.length-1][1];
+}
+
+function update(){
+  raf=0;
+  d=Math.min(1,Math.max(0,calc()));
+  if(woken)d=Math.max(d,.35);
+  dMax=Math.max(dMax,d);
+  root.style.setProperty('--d',d.toFixed(4));
+  for(const el of ats)if(!el.dataset.done&&dMax>=+el.dataset.at){el.dataset.done=1;swap(el,el.dataset.alt)}
+  body.classList.toggle('flick',d>.6&&!rm);
+  body.classList.toggle('deep',descent.getBoundingClientRect().top<56);
+  chatCheck();playLabel();eyeUpdate();
+}
+const sched=()=>{if(!raf)raf=requestAnimationFrame(update)};
+addEventListener('scroll',sched,{passive:true});
+addEventListener('resize',sched);
+
+function setWoken(){
+  if(woken)return;
+  woken=true;
+  body.classList.add('woken');
+  $$('[data-woke]').forEach(el=>swap(el,el.dataset.woke));
+  document.title='Bạn vẫn đang ngủ';
+  n++;renderCount();
+  sched();
+}
+$('#wake').onclick=()=>{setWoken();scrollTo({top:0,behavior:rm?'instant':'smooth'})};
+
+function once(el,ratio,fn){
+  const io=new IntersectionObserver(es=>{
+    for(const e of es)if(e.isIntersecting&&(e.intersectionRatio>=ratio||e.intersectionRect.height>=innerHeight*ratio)){io.disconnect();fn();return}
+  },{threshold:Array.from({length:21},(_,i)=>i/20)});
+  io.observe(el);
+}
+once($('#end'),.6,setWoken);
+once($('#tech'),.5,()=>setTimeout(()=>$('#b8').classList.add('on'),2500));
+once($('#order'),.5,()=>setTimeout(()=>{
+  const a=$('#addr'),t='Khỏi cần điền. Bên này biết phòng ngủ của bạn ở đâu rồi.';
+  if(a.value)return;
+  if(rm){a.value=t;return}
+  let i=0;
+  (function k(){if(a.value.length!==i)return;a.value=t.slice(0,++i);if(i<t.length)setTimeout(k,55)})();
+},1500));
+once($('#order'),.5,()=>setTimeout(()=>$('.off').classList.add('hand'),4000));
+$('#f').onsubmit=e=>{e.preventDefault();$('#ok').textContent='Cảm ơn bạn. Nệm nằm sẵn trong phòng bạn rồi đó.'};
+
+const lio=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){e.target.classList.add('in');lio.unobserve(e.target)}},{threshold:.5});
+$$('.ln p').forEach(p=>lio.observe(p));
+const fio=new IntersectionObserver(es=>{for(const e of es)if(e.isIntersecting){e.target.classList.add('in');fio.unobserve(e.target)}},{threshold:.2});
+$$('.fg').forEach(f=>fio.observe(f));
+
+let n=12408;
+const renderCount=()=>{$('#count').textContent=String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')};
+(function tick(){setTimeout(()=>{n++;renderCount();tick()},6000+Math.random()*4000)})();
+
+const q6=$('#q6'),fillQ6=()=>{$('#q6a').textContent='Bây giờ là '+hm()+'. Tối nào bạn đi ngủ lúc mấy giờ, bên này đều biết.'};
+q6.addEventListener('toggle',()=>{if(q6.open)fillQ6()});fillQ6();
+
+const cp=$('#cp'),cl=$('#cl');
+const say=(t,me)=>{
+  const m=document.createElement('div');m.className='m'+(me?' me':'');m.textContent=t;cl.append(m);
+  const real=cl.querySelectorAll('.m:not(.ty)');
+  for(let i=0;i<real.length-3;i++)real[i].remove();
+  cl.scrollTop=cl.scrollHeight;
+};
+const openChat=()=>{cp.hidden=false};
+const queue=[];let busy=false,hideT;
+function pump(){
+  if(busy||!queue.length)return;
+  busy=true;
+  const[f,wait,cb]=queue.shift();
+  setTimeout(()=>{
+    openChat();
+    const ty=document.createElement('div');ty.className='m ty';ty.textContent='Mai đang nhập…';cl.append(ty);cl.scrollTop=cl.scrollHeight;
+    setTimeout(()=>{
+      ty.remove();say(f());if(cb)cb();busy=false;pump();
+      clearTimeout(hideT);hideT=setTimeout(()=>{if(!queue.length&&document.activeElement!==$('#ci'))cp.hidden=true},7000);
+    },1200);
+  },wait);
+}
+const enqueue=(f,wait=0,cb)=>{queue.push([f,wait,cb]);pump()};
+const hr=new Date().getHours();
+const script=[
+  [.03,()=>'Dạ em chào anh/chị ạ! Em là Mai bên Yên Miên, anh/chị cần em tư vấn gì không ạ? 😊',2000],
+  [.35,()=>'Dạ anh/chị xem lâu ghê. Dạo này anh/chị khó ngủ lắm phải không ạ?'],
+  ...(hr>=23||hr<4?[[.45,()=>'Giờ này anh/chị vẫn chưa ngủ ạ? Nó thích người thức khuya lắm.']]:[]),
+  [.55,()=>'Dạ anh/chị lướt tới đây thôi ạ. Đừng kéo xuống nữa.'],
+  [.7,()=>'Dạ bây giờ là '+hm()+' rồi. Phòng anh/chị tắt đèn chưa ạ?'],
+  [.88,()=>'Anh/chị đừng quay lại nhìn ạ.'],
+  [.99,()=>'Dạ nó đứng ngay sau lưng anh/chị rồi ạ.',0,()=>{if(navigator.vibrate)navigator.vibrate([120,80,120])}]
+];
+let lastScroll=Date.now(),maxY=0,idleDone=false,backDone=false;
+addEventListener('scroll',()=>{lastScroll=Date.now()},{passive:true});
+setInterval(()=>{
+  if(!idleDone&&dMax>=.5&&Date.now()-lastScroll>=10000){idleDone=true;enqueue(()=>'Dạ sao anh/chị dừng lại ạ?')}
+},1000);
+function chatCheck(){
+  for(const s of script)if(!s.sent&&dMax>=s[0]){s.sent=true;enqueue(s[1],s[2]||0,s[3])}
+  maxY=Math.max(maxY,scrollY);
+  if(!backDone&&body.classList.contains('deep')&&maxY-scrollY>300){backDone=true;enqueue(()=>'Dạ trên đó không còn như lúc nãy đâu ạ.')}
+}
+$('#lc').onclick=()=>{cp.hidden=!cp.hidden};
+$('#cx').onclick=()=>{cp.hidden=true;$('#lc').focus()};
+$('#cf').onsubmit=e=>{
+  e.preventDefault();
+  const i=$('#ci'),v=i.value.trim();
+  if(!v)return;
+  i.value='';say(v,true);
+  enqueue(()=>dMax<.5?'Dạ em cảm ơn anh/chị, anh/chị đợi em một chút ạ.':'Suỵt. Gõ khẽ thôi ạ, nó nghe thấy đấy.');
+};
+
+let ac,mg,dr,br,timer,playing=false,idx=0;
+const N=[440,523.25,587.33,659.25,783.99,659.25,587.33,523.25],pb=$('#play');
+function playLabel(){pb.textContent=playing?'⏸ '+(dMax>=.65?'Nó vẫn đang ru':'Tắt'):'▶ Nghe thử'}
+function note(f){
+  const t=ac.currentTime,g=ac.createGain();
+  g.gain.setValueAtTime(.0001,t);
+  g.gain.exponentialRampToValueAtTime(.4,t+.01);
+  g.gain.exponentialRampToValueAtTime(.0001,t+.9);
+  g.connect(mg);
+  for(const ty of['sine','triangle']){
+    const o=ac.createOscillator();o.type=ty;o.frequency.value=f;o.detune.value=-d*700;
+    o.connect(g);o.start(t);o.stop(t+.95);
+  }
+}
+function step(){
+  if(!playing)return;
+  dr.gain.setTargetAtTime(d*.07,ac.currentTime,.3);
+  br.gain.setTargetAtTime(d>=.85?.05:0,ac.currentTime,1);
+  if(Math.random()>=d*.5)note(N[idx%8]);
+  idx++;
+  timer=setTimeout(step,420+d*500);
+}
+function start(){
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  ac=new AC();
+  mg=ac.createGain();mg.gain.setValueAtTime(0,ac.currentTime);mg.gain.linearRampToValueAtTime(.12,ac.currentTime+.3);mg.connect(ac.destination);
+  dr=ac.createGain();dr.gain.value=0;dr.connect(mg);
+  for(const f of[55,58.3]){const o=ac.createOscillator();o.type='sine';o.frequency.value=f;o.connect(dr);o.start()}
+  const nb=ac.createBuffer(1,ac.sampleRate*2,ac.sampleRate),nd=nb.getChannelData(0);
+  for(let i=0;i<nd.length;i++)nd[i]=Math.random()*2-1;
+  const ns=ac.createBufferSource();ns.buffer=nb;ns.loop=true;
+  const bp=ac.createBiquadFilter();bp.type='bandpass';bp.frequency.value=500;bp.Q.value=.8;
+  const sw=ac.createGain();sw.gain.value=.5;
+  const lfo=ac.createOscillator(),lg=ac.createGain();lfo.frequency.value=.22;lg.gain.value=.5;lfo.connect(lg);lg.connect(sw.gain);
+  br=ac.createGain();br.gain.value=0;
+  ns.connect(bp);bp.connect(sw);sw.connect(br);br.connect(ac.destination);
+  ns.start();lfo.start();
+  playing=true;step();
+}
+function stop(){
+  playing=false;clearTimeout(timer);
+  const c=ac;
+  mg.gain.cancelScheduledValues(c.currentTime);
+  mg.gain.setTargetAtTime(0,c.currentTime,.05);
+  br.gain.cancelScheduledValues(c.currentTime);
+  br.gain.setTargetAtTime(0,c.currentTime,.05);
+  setTimeout(()=>c.close(),500);
+  ac=null;
+}
+pb.onclick=()=>{playing?stop():start();playLabel()};
+
+document.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;mouse={x:e.clientX,y:e.clientY};sched()});
+document.documentElement.addEventListener('mouseleave',()=>{mouse=null;eyes.forEach(e=>e.classList.remove('hd2'))});
+function eyeUpdate(){
+  if(!mouse)return;
+  for(const e of eyes){
+    const r=e.getBoundingClientRect();
+    if(r.bottom<-200||r.top>innerHeight+200)continue;
+    const dx=mouse.x-(r.left+r.width/2),dy=mouse.y-(r.top+r.height/2),dist=Math.hypot(dx,dy)||1,k=Math.min(4,dist/30)/dist;
+    e.classList.toggle('hd2',dist<180&&!e.classList.contains('big'));
+    e.style.setProperty('--px',dx*k+'px');e.style.setProperty('--py',dy*k+'px');
+  }
+}
+if(!rm)eyes.forEach(e=>{
+  (function loop(){setTimeout(()=>{e.classList.add('bl');setTimeout(()=>e.classList.remove('bl'),180);loop()},1800+Math.random()*5200)})();
+});
+
+let prevTitle=null;
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden){if(dMax>.3){prevTitle=document.title;document.title='Quay lại đi, nó đang đợi'}}
+  else if(prevTitle!==null){document.title=prevTitle;prevTitle=null}
+});
+
+addEventListener('load',()=>{
+  const q=new URLSearchParams(location.search),a=q.get('at');
+  if(a!==null){scrollTo({top:+a*(root.scrollHeight-innerHeight),behavior:'instant'});update()}
+  if(q.get('woke')==='1'){update();setWoken();scrollTo({top:0,behavior:'instant'})}
+  update();
+});
+update();
+})();
+</script>
+</body>
+</html>
