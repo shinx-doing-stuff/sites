@@ -19,6 +19,7 @@
   --rad:18px;--k:0;--r:calc(var(--rad) * (1 - var(--k)));
   --av-bg:#d5d9e3;--av-fg:#a0a6b5;--av-eye:transparent;
   --font:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --ckb:0px;--lift:0px;
 }
 body.night{
   --bg:#0b0b0e;--card:#15151a;--text:#d8d4cc;--muted:#8d8a84;--line:#26262c;
@@ -30,7 +31,7 @@ body.late{--av-bg:#000;--av-fg:#000;--av-eye:#e8e4da}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--text);font:400 15px/1.5 var(--font);overflow-x:hidden}
-body,header.hdr,.sec,.price th,.price td,.card,.bub.me,.bub.them,input,.toast,.pill,.btn,.field,.steps li::before,.dot{
+body,header.hdr,.sec,.price th,.price td,.card,.bub.me,.bub.them,input,.toast,.pill,.btn,.field,.steps li::before,.dot,#ck,.mb{
   transition:background-color 2.5s,color 2.5s,border-color 2.5s,box-shadow 2.5s}
 h1,h2,h3,p{margin:0}
 a{color:inherit}
@@ -224,13 +225,13 @@ body.night .illus .parcel{opacity:0}
 .grain{z-index:50;opacity:calc(var(--k) * .16);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
 .flk{z-index:55;background:#000;opacity:0;transition:opacity .4s}
 
-#toasts{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;max-width:536px;margin:0 auto;pointer-events:none}
+#toasts{position:fixed;left:12px;right:12px;bottom:calc(12px + var(--ckb));z-index:60;max-width:536px;margin:0 auto;pointer-events:none}
 .toast{pointer-events:auto;display:flex;gap:10px;align-items:center;width:100%;text-align:left;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:var(--toast);color:var(--text);box-shadow:0 8px 28px rgba(0,0,0,.28);animation:toastIn .3s}
 .toast .tt{display:flex;flex-direction:column;min-width:0;font-size:13px;line-height:1.35}
 .toast .tt span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 @keyframes toastIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
-.sheet{position:fixed;left:0;right:0;bottom:0;z-index:70;max-width:560px;margin:0 auto;background:#1c1c22;color:#f1eee8;border-radius:16px 16px 0 0;padding:12px 12px 14px;box-shadow:0 -8px 30px rgba(0,0,0,.4);
+.sheet{position:fixed;left:0;right:0;bottom:var(--ckb);z-index:70;max-width:560px;margin:0 auto;background:#1c1c22;color:#f1eee8;border-radius:16px 16px 0 0;padding:12px 12px 14px;box-shadow:0 -8px 30px rgba(0,0,0,.4);
   transform:translateY(110%);visibility:hidden;transition:transform .4s,visibility 0s .4s}
 .sheet.open{transform:none;visibility:visible;transition:transform .4s}
 .sheet-row{display:flex;align-items:center;gap:10px}
@@ -248,6 +249,23 @@ body.night .illus .parcel{opacity:0}
 .cap{min-height:3em;margin-top:8px;font-size:14px;color:#e4e0d8}
 .timer{font-variant-numeric:tabular-nums}
 
+#ck{position:fixed;left:0;right:0;bottom:0;z-index:58;padding:10px 12px;background:var(--card);color:var(--text);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(0,0,0,.12)}
+.ck-in{max-width:560px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px}
+#ck p{flex:1 1 220px;font-size:13px;line-height:1.4}
+.ck-btns{display:flex;gap:8px}
+.ck-btns .btn{flex:none;min-height:40px;padding:0 18px}
+body.ck{--ckb:var(--ckh,104px)}
+
+.mb{position:fixed;left:16px;bottom:calc(16px + var(--ckb) + var(--lift));z-index:61;width:40px;height:40px;padding:0;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line);background:color-mix(in srgb,var(--card) 85%,transparent);color:var(--text);backdrop-filter:blur(6px);
+  transition:bottom .3s,background-color 2.5s,color 2.5s,border-color 2.5s}
+.mb[hidden]{display:none}
+.mb svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mb .x{display:none}
+.mb.mu .x{display:block}
+.mb.mu .w{display:none}
+body:has(#toasts>.toast){--lift:68px}
+body.calling{--lift:calc(var(--shh,150px) + 8px)}
+
 .glitch{display:inline-block;animation:glitch .3s steps(3)}
 @keyframes glitch{25%{transform:translateX(-2px);text-shadow:2px 0 #f5a524,-2px 0 #3b3fd8}50%{transform:translateX(2px);text-shadow:-2px 0 #f5a524,2px 0 #3b3fd8}75%{transform:translateX(-1px)}}
 
@@ -257,7 +275,7 @@ body.night .illus .parcel{opacity:0}
 }
 </style>
 </head>
-<body>
+<body class="ck">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="logo" viewBox="0 0 32 32">
@@ -652,6 +670,14 @@ body.night .illus .parcel{opacity:0}
   </div>
 </div>
 
+<button class="mb" id="mute" type="button" hidden aria-label="Tắt âm thanh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="w" d="M16.5 9a4.5 4.5 0 0 1 0 6"/><path class="x" d="M17 8l5 8M22 8l-5 8"/></svg></button>
+<div id="ck" role="region" aria-label="Cookie">
+  <div class="ck-in">
+    <p>Gõ Cửa Express dùng cookie để phục vụ bạn tốt hơn.</p>
+    <div class="ck-btns"><button class="btn" type="button">Đồng ý</button><button class="btn ghost" type="button">Để sau</button></div>
+  </div>
+</div>
+
 <script>
 (() => {
 'use strict';
@@ -765,6 +791,7 @@ function pump() {
   const finish = () => {
     typing.remove();
     bubble(m.text, 'them');
+    if (!instant) blip();
     if (m.toastToo && !instant) toast(m.text);
     busy = false;
     pump();
@@ -821,7 +848,7 @@ $('#callBtn').addEventListener('click', () => {
 });
 
 const sheet = $('#sheet');
-let callState = 0, ringT, callT, capT, knockT, actx, noiseBuf;
+let callState = 0, ringT, ringI, callT, capT, knockT, actx, noiseBuf;
 const CAPS = ['…', '(tiếng thở)', '(bốn tiếng gõ cửa)', 'Em nghe thấy tiếng gõ đó vọng ra từ điện thoại của anh/chị.'];
 
 function openSheet() {
@@ -830,9 +857,11 @@ function openSheet() {
   body.classList.add('calling');
   requestAnimationFrame(() => sheet.classList.add('open'));
   ringT = setTimeout(decline, 12000);
+  if (!instant) ring();
+  ringI = setInterval(ring, 2400);
 }
 function closeSheet() {
-  clearTimeout(ringT); clearInterval(callT); clearInterval(capT); clearInterval(knockT);
+  clearTimeout(ringT); clearInterval(ringI); clearInterval(callT); clearInterval(capT); clearInterval(knockT);
   callState = 3;
   sheet.classList.remove('open');
   body.classList.remove('calling');
@@ -845,7 +874,7 @@ function decline() {
 }
 function answer() {
   if (callState !== 1) return;
-  clearTimeout(ringT);
+  clearTimeout(ringT); clearInterval(ringI);
   callState = 2;
   $('#ringView').hidden = true;
   $('#callView').hidden = false;
@@ -856,7 +885,7 @@ function answer() {
   callT = setInterval(() => { sec++; timer.textContent = pad(Math.floor(sec / 60)) + ':' + pad(sec % 60); }, 1000);
   const showCap = () => {
     cap.textContent = CAPS[i];
-    if (i === 2) { knock(); knockT = setInterval(knock, 9000); }
+    if (i === 2) { knock(callG); knockT = setInterval(() => knock(callG), 9000); }
     if (++i >= CAPS.length) clearInterval(capT);
   };
   showCap();
@@ -870,45 +899,134 @@ $('#endBtn').onclick = hangup;
 $('#closeCall').onclick = hangup;
 on(.6, openSheet);
 
-function startAudio() {
+const AC = window.AudioContext || window.webkitAudioContext;
+const GEST = ['pointerdown', 'keydown', 'touchend'];
+const mb = $('#mute');
+let muted = false, wantBreath = false, breathG, callG, callSrc = [], arriveT;
+const live = () => !!actx && actx.state === 'running' && !muted;
+
+function unlock() {
   try {
-    const AC = window.AudioContext || window.webkitAudioContext;
-    if (!AC) return;
-    actx = new AC();
-    const len = actx.sampleRate * 2;
-    noiseBuf = actx.createBuffer(1, len, actx.sampleRate);
-    const d = noiseBuf.getChannelData(0);
-    for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
-    const loop = () => { const s = actx.createBufferSource(); s.buffer = noiseBuf; s.loop = true; s.start(); return s; };
-    const hp = actx.createBiquadFilter(); hp.type = 'highpass'; hp.frequency.value = 2500;
-    const hg = actx.createGain(); hg.gain.value = .01;
-    loop().connect(hp); hp.connect(hg); hg.connect(actx.destination);
-    const bp = actx.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 700; bp.Q.value = .8;
-    const bg = actx.createGain(); bg.gain.value = .025;
-    loop().connect(bp); bp.connect(bg); bg.connect(actx.destination);
-    const lfo = actx.createOscillator(); lfo.frequency.value = .25;
-    const lg = actx.createGain(); lg.gain.value = .025;
-    lfo.connect(lg); lg.connect(bg.gain); lfo.start();
+    if (!actx) {
+      actx = new AC();
+      const len = actx.sampleRate * 2;
+      noiseBuf = actx.createBuffer(1, len, actx.sampleRate);
+      const d = noiseBuf.getChannelData(0);
+      for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+    }
+    actx.resume().then(() => {
+      if (actx.state !== 'running') return;
+      GEST.forEach(g => document.removeEventListener(g, unlock));
+      mb.hidden = false;
+      breathe();
+    }, () => {});
   } catch (e) { actx = null; }
 }
-function knock() {
-  if (!actx) return;
-  const t0 = actx.currentTime + .05;
-  for (let i = 0; i < 4; i++) {
-    const t = t0 + i * .26;
-    const s = actx.createBufferSource(); s.buffer = noiseBuf;
-    const lp = actx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 240;
-    const g = actx.createGain();
-    g.gain.setValueAtTime(0, t);
-    g.gain.linearRampToValueAtTime(.18, t + .006);
-    g.gain.exponentialRampToValueAtTime(.001, t + .14);
-    s.connect(lp); lp.connect(g); g.connect(actx.destination);
-    s.start(t, Math.random()); s.stop(t + .2);
+if (AC) GEST.forEach(g => document.addEventListener(g, unlock));
+
+mb.addEventListener('click', () => {
+  muted = !muted;
+  mb.classList.toggle('mu', muted);
+  mb.setAttribute('aria-label', muted ? 'Bật âm thanh' : 'Tắt âm thanh');
+  (muted ? actx.suspend() : actx.resume()).catch(() => {});
+});
+
+function noiseLoop() {
+  const s = actx.createBufferSource(); s.buffer = noiseBuf; s.loop = true; s.start();
+  return s;
+}
+function tone(fs, t, dur, peak) {
+  const g = actx.createGain();
+  g.gain.setValueAtTime(0, t);
+  g.gain.linearRampToValueAtTime(peak / fs.length, t + .02);
+  g.gain.setValueAtTime(peak / fs.length, t + dur - .06);
+  g.gain.linearRampToValueAtTime(0, t + dur);
+  g.connect(actx.destination);
+  for (const f of fs) {
+    const o = actx.createOscillator(); o.frequency.value = f;
+    o.connect(g); o.start(t); o.stop(t + dur + .02);
   }
 }
-function stopAudio() {
-  if (actx) { actx.close().catch(() => {}); actx = null; }
+function thump(out, t, freq, peak, dur) {
+  const s = actx.createBufferSource(); s.buffer = noiseBuf;
+  const lp = actx.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = freq;
+  const g = actx.createGain();
+  g.gain.setValueAtTime(0, t);
+  g.gain.linearRampToValueAtTime(peak, t + .006);
+  g.gain.exponentialRampToValueAtTime(.001, t + dur);
+  s.connect(lp); lp.connect(g); g.connect(out);
+  s.start(t, Math.random()); s.stop(t + dur + .06);
 }
+function blip() {
+  if (!live()) return;
+  const t = actx.currentTime + .02;
+  tone([880], t, .09, .06);
+  tone([1320], t + .09, .09, .06);
+}
+function ring() {
+  if (callState !== 1 || !live()) return;
+  const t = actx.currentTime + .02;
+  tone([440, 480], t, .4, .05);
+  tone([440, 480], t + .6, .4, .05);
+}
+function knock(out) {
+  if (!live()) return;
+  const t0 = actx.currentTime + .05;
+  for (let i = 0; i < 4; i++) thump(out || actx.destination, t0 + i * .26, 240, .18, .14);
+}
+function thud() {
+  if (!live()) return;
+  thump(actx.destination, actx.currentTime + .02, 130, .15, .2);
+}
+function breathe() {
+  if (!wantBreath || !actx) return;
+  if (!breathG) {
+    const bp = actx.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 700; bp.Q.value = .8;
+    const sw = actx.createGain(); sw.gain.value = .5;
+    const lfo = actx.createOscillator(); lfo.frequency.value = .25;
+    const lg = actx.createGain(); lg.gain.value = .5;
+    breathG = actx.createGain(); breathG.gain.value = 0;
+    noiseLoop().connect(bp); bp.connect(sw); sw.connect(breathG); breathG.connect(actx.destination);
+    lfo.connect(lg); lg.connect(sw.gain); lfo.start();
+  }
+  breathG.gain.setTargetAtTime(.05, actx.currentTime, 1);
+}
+function arriveKnock(now) {
+  if (pMax >= .78) return;
+  if (now && callState !== 2) knock();
+  arriveT = setTimeout(arriveKnock, 11000 + Math.random() * 5000, true);
+}
+on(.64, () => arriveKnock(!instant));
+on(.78, () => { clearTimeout(arriveT); if (!instant) thud(); });
+on(.86, () => { wantBreath = true; breathe(); });
+
+function startAudio() {
+  if (!muted) unlock();
+  if (!actx) return;
+  try {
+    callG = actx.createGain(); callG.connect(actx.destination);
+    const loop = () => { const s = noiseLoop(); callSrc.push(s); return s; };
+    const hp = actx.createBiquadFilter(); hp.type = 'highpass'; hp.frequency.value = 2500;
+    const hg = actx.createGain(); hg.gain.value = .01;
+    loop().connect(hp); hp.connect(hg); hg.connect(callG);
+    const bp = actx.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 700; bp.Q.value = .8;
+    const bg = actx.createGain(); bg.gain.value = .025;
+    loop().connect(bp); bp.connect(bg); bg.connect(callG);
+    const lfo = actx.createOscillator(); lfo.frequency.value = .25; callSrc.push(lfo);
+    const lg = actx.createGain(); lg.gain.value = .025;
+    lfo.connect(lg); lg.connect(bg.gain); lfo.start();
+  } catch (e) { stopAudio(); }
+}
+function stopAudio() {
+  callSrc.forEach(s => { try { s.stop(); } catch (e) {} });
+  callSrc = [];
+  if (callG) { callG.disconnect(); callG = null; }
+}
+
+const ck = $('#ck');
+new ResizeObserver(() => root.style.setProperty('--ckh', ck.offsetHeight + 'px')).observe(ck);
+ck.addEventListener('click', e => { if (e.target.closest('button')) { ck.remove(); body.classList.remove('ck'); } });
+new ResizeObserver(() => root.style.setProperty('--shh', sheet.offsetHeight + 'px')).observe(sheet);
 
 const tl = $('#tl');
 const ago = (days, hh, mm) => { const d = new Date(); d.setDate(d.getDate() - days); d.setHours(hh, mm, 0, 0); return d; };
