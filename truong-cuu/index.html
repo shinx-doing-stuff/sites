@@ -63,6 +63,10 @@ body.under nav a:hover{color:var(--ac)}
 .up{background:var(--ivory);color:var(--navy);--acc:var(--goldd);--rl:var(--gold)}
 .up.alt{background:#ece3cf}
 .bsmt{background:var(--bgb);color:var(--pale);--acc:var(--ac);--rl:var(--ac);min-height:80svh;display:flex;flex-direction:column;justify-content:center;border-top:1px solid color-mix(in srgb,var(--ac) 30%,transparent)}
+#b1{background:#d6d3cc;color:#1c1c1a;--acc:#6b685f;--rl:#8a867c}
+#b2{background:#8d8a84;color:#111;--acc:#2a2926;--rl:#3a3935}
+#b3{background:#3b3b3a}
+#b1 .bays{background:linear-gradient(rgba(150,120,20,.6),rgba(150,120,20,.6)) bottom/100% 3px no-repeat,repeating-linear-gradient(100deg,transparent 0 58px,rgba(150,120,20,.55) 58px 62px)}
 .bsmt .btn.ghost,.bsmt a{color:inherit}
 h1,h2{font-family:var(--serif);font-weight:700;line-height:1.12}
 h1{font-size:clamp(2.4rem,9.5vw,4.6rem)}
@@ -112,11 +116,33 @@ body.sunk #tower .moon{opacity:.25}
 
 .list{margin-top:22px;display:grid;gap:10px}
 .list li{padding-left:26px;position:relative}
-.list li::before{content:"";position:absolute;left:0;top:.7em;width:14px;height:1px;background:var(--gold)}
+.list li::before{content:"";position:absolute;left:0;top:.7em;width:14px;height:1px;background:var(--rl,var(--gold))}
 .promoline{margin-top:22px;padding:12px 16px;border:1px solid var(--gold);font-size:.9rem;max-width:30em}
 .plan text{font:600 12px var(--sans);fill:var(--navy);text-anchor:middle}
 .plan .r{fill:rgba(255,255,255,.35);stroke:var(--navy);stroke-width:1.5}
 .pic{border:1px solid rgba(201,164,92,.6);padding:10px;background:rgba(255,255,255,.35)}
+.pl{width:100%;max-width:520px;border-collapse:collapse;border-top:1px solid var(--gold)}
+.pl th,.pl td{padding:14px 0;border-bottom:1px solid var(--gold);text-align:left;font-weight:400;vertical-align:top;line-height:1.5}
+.pl th{white-space:nowrap;font-size:.94rem}
+.pl td{padding-left:14px;font-size:.94rem;text-align:right;font-weight:600}
+.pl+.fine{max-width:520px}
+.board{width:100%;max-width:460px;justify-self:center;background:#fbf8f0;border:6px solid #5b4630;box-shadow:inset 0 0 0 1px var(--gold),0 12px 28px rgba(13,27,42,.2)}
+.bh{background:var(--navy);color:var(--ivory);text-align:center;font-weight:600;font-size:.8rem;letter-spacing:.32em;padding:11px 0 11px .32em}
+.board ol{margin:0;padding:20px 22px 22px 46px;font-size:.92rem;line-height:1.55}
+.board li+li{margin-top:10px}
+.board li::marker{color:var(--goldd);font-weight:600}
+.phone{width:100%;max-width:340px;justify-self:center;background:#e6e1d3;border:7px solid #1b1d20;border-radius:28px;overflow:hidden;box-shadow:0 14px 30px rgba(13,27,42,.25)}
+.ph{background:#27414a;color:#f4f1e8;font-size:.82rem;font-weight:600;padding:12px 14px}
+#chat{padding:12px 12px 14px;display:grid;gap:10px}
+.m{display:grid;gap:3px;justify-items:start}
+.m b{font-size:.68rem;font-weight:600;color:#4a5b52;padding-left:6px}
+.bb{max-width:88%;background:#fff;border-radius:4px 14px 14px 14px;padding:8px 11px 5px;font-size:.84rem;line-height:1.45;color:#1f2326}
+.bb small{display:block;text-align:right;font-size:.62rem;color:#6b7072;margin-top:2px}
+.m.bm .bb{background:#dce8ef}
+.typing i{display:inline-block;width:6px;height:6px;margin:3px 2px 6px;border-radius:50%;background:#8a9094;animation:ty 1.2s ease-in-out infinite}
+.typing i:nth-child(2){animation-delay:.2s}
+.typing i:nth-child(3){animation-delay:.4s}
+@keyframes ty{50%{opacity:.3}}
 
 .note{position:relative;max-width:400px;background:#f3ecd6;color:#2a2620;padding:26px 22px 20px;margin-top:30px;transform:rotate(var(--r,-1.2deg));box-shadow:0 10px 22px rgba(0,0,0,.28);border-radius:2px;font-size:.92rem;line-height:1.6}
 .note::before{content:"";position:absolute;top:-7px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e9d08a,#8a6a28);box-shadow:0 2px 3px rgba(0,0,0,.4)}
@@ -131,14 +157,14 @@ body.sunk #tower .moon{opacity:.25}
 .card input,.card select{font:400 1rem var(--sans);padding:12px;border:1px solid rgba(13,27,42,.35);background:#fff;color:var(--navy);border-radius:2px;width:100%}
 .card .btn{justify-self:start}
 #thanks{margin-top:16px;color:var(--goldd);font-weight:600}
-.lobby{padding-bottom:0}
+.up.lobby{background:#e3e1d8;padding-bottom:0}
 .ff{margin-top:clamp(56px,9vw,100px);background:var(--navy);color:var(--ivory);padding:44px 0 28px}
 .ff .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:28px 0}
 .ff .cols a{display:block;font-size:.88rem;text-decoration:none;opacity:.85;padding:5px 0}
 .ff .cols a:hover{color:var(--gold)}
 .ff .logo{font-size:.7rem}
 .ff small{display:block;font-size:.78rem;opacity:.7;border-top:1px solid rgba(201,164,92,.35);padding-top:18px}
-.still{background:#2a2c2d;color:#9aa096;text-align:center;font-size:.78rem;padding:26px 20px 30px}
+.still{background:#d6d3cc;color:#3a3935;text-align:center;font-size:.78rem;padding:26px 20px 30px}
 
 .exitwrap{position:relative;height:230px;max-width:420px;margin:0 auto;width:100%}
 .exit{position:absolute;top:0;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;background:#0a6b3a;color:#fff;font-weight:600;letter-spacing:.14em;font-size:.9rem;padding:10px 16px;border:2px solid #d7f0df;box-shadow:0 0 22px rgba(60,220,130,.45)}
@@ -363,7 +389,26 @@ body.ck #say{bottom:calc(var(--ckh,96px) + 12px)}
   </div>
 </section>
 
-<section class="floor up" id="f5" data-floor="5" data-d="0.1" data-say="Tầng 5. Phòng tập và spa.">
+<section class="floor up" id="f9" data-floor="9" data-d="0.08" data-say="Tầng 9. Phòng kinh doanh.">
+  <div class="c row">
+    <div>
+      <h2>Chính sách bán hàng &amp; tiến độ thanh toán</h2>
+      <i class="rule"></i>
+    </div>
+    <div>
+      <table class="pl">
+        <tr><th scope="row">Đặt cọc</th><td>100 triệu đồng</td></tr>
+        <tr><th scope="row">Đợt 1 · Ký hợp đồng</th><td>20% giá trị căn hộ</td></tr>
+        <tr><th scope="row">Đợt 2 · Cất nóc</th><td>30%</td></tr>
+        <tr><th scope="row">Đợt 3 · Bàn giao</th><td>45%</td></tr>
+        <tr><th scope="row">Đợt cuối · Nhận sổ</th><td>5% và phần còn lại của quý khách</td></tr>
+      </table>
+      <p class="fine">Sở hữu lâu dài. Hợp đồng không có điều khoản chuyển đi.</p>
+    </div>
+  </div>
+</section>
+
+<section class="floor up alt" id="f5" data-floor="5" data-d="0.1" data-say="Tầng 5. Phòng tập và spa.">
   <div class="c row rev">
     <div>
       <h2>Phòng gym, yoga &amp; spa</h2>
@@ -374,6 +419,52 @@ body.ck #say{bottom:calc(var(--ckh,96px) + 12px)}
       <p class="nh">THÔNG BÁO CỦA BAN QUẢN LÝ</p>
       <p>Sau 23:00, gương phòng tập được phủ vải trắng. Cư dân vui lòng không tự ý gỡ ra.</p>
     </aside>
+  </div>
+</section>
+
+<section class="floor up" id="f3" data-floor="3" data-d="0.13" data-say="Tầng 3. Văn phòng Ban quản lý.">
+  <div class="c row rev">
+    <div>
+      <h2>Nội quy tòa nhà</h2>
+      <i class="rule"></i>
+    </div>
+    <div class="board">
+      <div class="bh">NỘI QUY</div>
+      <ol>
+        <li>Giữ yên lặng sau 22:00.</li>
+        <li>Không nuôi thú cưng trên 20 kg.</li>
+        <li>Không phơi quần áo ngoài ban công mặt tiền.</li>
+        <li>Không đốt vàng mã trong căn hộ. Tòa nhà có khu hóa vàng riêng tại hầm B3.</li>
+        <li>Không dùng thang máy số 4 sau 23:00.</li>
+        <li>Thang dừng ở tầng không ai bấm thì không bước ra, không nhìn ra.</li>
+        <li>Nghe gõ cửa sau nửa đêm thì đếm số tiếng gõ trước khi mở. Ba tiếng là hàng xóm.</li>
+        <li>Cư dân đã nhận nhà không rời tòa nhà quá 49 ngày.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="floor up alt" id="f2" data-floor="2" data-d="0.16" data-say="Tầng 2. Khu sinh hoạt chung.">
+  <div class="c row">
+    <div>
+      <h2>Cộng đồng cư dân</h2>
+      <i class="rule"></i>
+      <p>Hơn 400 hộ gia đình văn minh, thân thiện. Nhóm trò chuyện cư dân hoạt động sôi nổi mỗi ngày.</p>
+    </div>
+    <div class="phone">
+      <div class="ph">Cư dân Trường Cửu (412)</div>
+      <div id="chat">
+        <div class="m"><b>Chị Hoa 1205</b><div class="bb">Cả nhà ơi tầng 12 có ai nhận nhầm kiện hàng của em không ạ?<small>21:14</small></div></div>
+        <div class="m"><b>Anh Tùng 0807</b><div class="bb">Mai cắt nước từ 9h đến 11h nha mọi người, BQL mới báo.<small>21:20</small></div></div>
+        <div class="m"><b>Cô Lan 1502</b><div class="bb">Nhà ai khoan tường giờ này vậy ạ? Con em mới ngủ.<small>23:41</small></div></div>
+        <div class="m"><b>Anh Tùng 0807</b><div class="bb">Em nghe rồi, hình như từ 12A vọng xuống.<small>23:43</small></div></div>
+        <div class="m"><b>Chị Hoa 1205</b><div class="bb">12A làm gì có ai ở anh ơi. Cả tầng chưa bàn giao mà.<small>23:44</small></div></div>
+        <div class="m"><b>Cô Lan 1502</b><div class="bb">Thang số 4 lại tự chạy xuống hầm. Trong thang có người, đứng quay mặt vào góc.<small>02:58</small></div></div>
+        <div class="m" id="typing" aria-hidden="true" hidden><div class="bb typing"><i></i><i></i><i></i></div></div>
+        <div class="m bm" hidden><b>Ban Quản Lý</b><div class="bb">Đề nghị cư dân không bàn tán. Ai đang ở hành lang vui lòng về căn hộ và khóa cửa.<small>03:00</small></div></div>
+        <div class="m" hidden><b>12A-04</b><div class="bb">Nhà mình còn thức không ạ? Em đứng ngoài cửa nãy giờ.<small>03:01</small></div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -482,18 +573,23 @@ body.ck #say{bottom:calc(var(--ckh,96px) + 12px)}
 
 <section class="floor bsmt" id="b4" data-floor="B4" data-d="0.66" data-say="Hầm B4. Thang đang đi xuống.">
   <div class="c">
-    <h2>Hầm B4</h2>
+    <h2>Hầm B4 · Khu căn hộ Tĩnh Cư</h2>
     <i class="rule"></i>
-    <p class="big">Tầng này không có trong bản vẽ.</p>
-    <p class="fine">Đêm nào đúng 3 giờ thang máy cũng dừng ở đây. Cửa mở, không ai bước ra.</p>
+    <p>Căn hộ không cửa sổ, cách âm tuyệt đối, không lo nắng gắt hay tiếng ồn. Phù hợp với cư dân cần nghỉ ngơi dài hạn.</p>
+    <ul class="list">
+      <li>Diện tích: 2,2 m²</li>
+      <li>Trần cao: 0,7 m</li>
+      <li>Tình trạng: Đã bán hết</li>
+    </ul>
+    <p class="fine">Khu này không có trong bản vẽ được duyệt. Đêm nào đúng 3 giờ thang máy cũng dừng ở đây.</p>
   </div>
 </section>
 
 <section class="floor bsmt" id="b7" data-floor="B7" data-d="0.76" data-say="Hầm B7. Vui lòng không gõ cửa.">
   <div class="c">
-    <h2>Hầm B7</h2>
+    <h2>Hầm B7 · Căn hộ khóa trong</h2>
     <i class="rule"></i>
-    <p>Dưới này cũng có hành lang, cũng có số nhà. Cửa nào cũng khóa từ bên trong.</p>
+    <p>An ninh tuyệt đối: cửa chỉ mở được từ bên trong. Cư dân tầng này chưa ai có nhu cầu ra ngoài.</p>
     <div class="doors7">
       <button class="door" type="button"><span class="frame"><span class="leaf"><b class="plate">B7-01</b><i class="peep"></i><i class="knob"></i></span></span></button>
       <button class="door" type="button"><span class="frame"><span class="leaf"><b class="plate">B7-02</b><i class="peep"></i><i class="knob"></i></span></span></button>
@@ -507,21 +603,27 @@ body.ck #say{bottom:calc(var(--ckh,96px) + 12px)}
 
 <section class="floor bsmt" id="b13" data-floor="B13" data-d="0.86" data-say="Hầm B13. Có người đang đợi thang.">
   <div class="c">
-    <h2>Hầm B13</h2>
+    <h2>Hầm B13 · Tầng 13</h2>
     <i class="rule"></i>
-    <p class="big">Tầng 13 của tòa nhà nằm ở đây.</p>
-    <p class="fine">Cư dân tầng này dọn đến từ trước khi tòa nhà khởi công.</p>
+    <p class="big">Tầng 13 của tòa nhà được bố trí tại đây.</p>
+    <ul class="list">
+      <li>Bàn giao: năm 1987</li>
+      <li>Khởi công tòa nhà: năm 2019</li>
+      <li>Cư dân hiện hữu: đông đủ</li>
+    </ul>
     <div class="crowd" id="crowd" aria-hidden="true">
       <span class="fig" style="--h:.97"><i></i><i></i></span><span class="fig" style="--h:1"><i></i><i></i></span><span class="fig" style="--h:.93"><i></i><i></i></span><span class="fig" style="--h:.99"><i></i><i></i></span><span class="fig" style="--h:.95"><i></i><i></i></span><span class="fig" style="--h:1"><i></i><i></i></span><span class="fig" style="--h:.96"><i></i><i></i></span>
     </div>
+    <p class="fine">Cư dân tầng này rất mong có hàng xóm mới.</p>
   </div>
 </section>
 
 <section class="floor bsmt" id="b49" data-floor="B49" data-d="0.94" data-say="Hầm B49. Sắp đến nơi.">
   <div class="c">
-    <h2>Hầm B49</h2>
+    <h2>Hầm B49 · Phòng sinh hoạt cộng đồng</h2>
     <i class="rule"></i>
-    <p class="big">Trên kia cúng 49 ngày xong rồi. Không còn ai gọi tên bạn nữa.</p>
+    <p class="big">Nơi tổ chức lễ 49 ngày cho cư dân mới.</p>
+    <p class="fine">Lễ của quý khách đã xong. Trên kia không còn ai gọi tên quý khách nữa.</p>
   </div>
 </section>
 
@@ -562,7 +664,7 @@ body.ck #say{bottom:calc(var(--ckh,96px) + 12px)}
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const root=document.documentElement,body=document.body;
-const floors=$$('.floor'),firstB=floors.findIndex(f=>f.classList.contains('bsmt')),endIdx=floors.length-1;
+const floors=$$('.floor'),darkB=floors.findIndex(f=>f.id==='b3'),endIdx=floors.length-1;
 const lv=$('#lv'),say=$('#say'),promo=$('.promo');
 const rotEls=$$('[data-at]'),sunkEls=$$('[data-sunk]');
 let dNow=0,dMax=0,cur=-1,lowest=0,sunk=false,busy=false,timed=false,raf=0,sayT,baseTitle=document.title,promoH=promo.offsetHeight;
@@ -745,6 +847,14 @@ function seen(el,min,cb){
 let endSeen=false;
 seen(floors[endIdx],.6,()=>{if(endSeen)return;endSeen=true;rm?goSunk():ride()});
 seen($('#crowd'),.3,()=>$('#crowd').classList.add('seen'));
+seen($('#f2'),.5,()=>{
+  const ty=$('#typing');
+  $$('.m[hidden]:not(#typing)',$('#chat')).forEach((m,i)=>{
+    const t=rm?0:2000+i*3000;
+    if(!rm)setTimeout(()=>{m.before(ty);ty.hidden=false},t-1000);
+    setTimeout(()=>{ty.hidden=true;m.hidden=false},t);
+  });
+});
 seen($('#b7'),.5,()=>setTimeout(()=>$('#d4').classList.add('open'),rm?0:3000));
 
 function update(){
@@ -761,7 +871,7 @@ function update(){
   dNow=d;dMax=Math.max(dMax,d);lowest=Math.max(lowest,y);
   root.style.setProperty('--d',d.toFixed(3));
   root.style.setProperty('--pt',Math.max(0,promoH-y)+'px');
-  if(i!==cur){cur=i;body.classList.toggle('under',i>=firstB);announce();ding()}
+  if(i!==cur){cur=i;body.classList.toggle('under',i>=darkB);announce();ding()}
   if(i===endIdx&&!timed){
     timed=true;const t=new Date();
     $('#hm').textContent=String(t.getHours()).padStart(2,'0')+':'+String(t.getMinutes()).padStart(2,'0');
