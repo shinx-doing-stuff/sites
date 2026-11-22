@@ -200,6 +200,12 @@ body.sunk #tower .moon{opacity:.25}
 #snd[aria-pressed="true"] .x{display:none}
 #say{position:fixed;z-index:100;left:12px;bottom:12px;max-width:80vw;background:rgba(8,12,18,.9);color:var(--ivory);border:1px solid rgba(201,164,92,.6);border-radius:10px;padding:8px 14px;font-size:.8rem;line-height:1.4;opacity:0;transition:opacity .5s;pointer-events:none}
 #say.show{opacity:1}
+body.ck #say{bottom:calc(var(--ckh,96px) + 12px)}
+#ck{position:fixed;z-index:110;left:0;right:0;bottom:0;background:var(--navy);color:var(--ivory);border-top:1px solid var(--gold);padding:12px 0}
+#ck .ci{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px}
+#ck p{flex:1 1 320px;font-size:.82rem;line-height:1.5}
+#ck .ckb{display:flex;gap:10px}
+#ck :focus-visible{outline-color:var(--ivory)}
 #fx{position:fixed;inset:0;z-index:70;pointer-events:none;opacity:clamp(0,(var(--d) - .2) * 1.1,1);background-image:radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,.72) 100%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 #flick{position:fixed;inset:0;z-index:71;pointer-events:none;background:#000;opacity:0;transition:opacity .5s}
 .dr-wrap{position:fixed;inset:0;z-index:95;pointer-events:none;display:none}
@@ -223,7 +229,7 @@ body.sunk #tower .moon{opacity:.25}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
-<body>
+<body class="ck">
 <div id="wrap">
 <div class="promo">Mở bán đợt cuối · Chiết khấu đến 12% · Hỗ trợ lãi suất 0% trong 24 tháng</div>
 <header>
@@ -534,7 +540,7 @@ body.sunk #tower .moon{opacity:.25}
 <div id="lift">
   <div class="row1">
     <span id="lv">30</span><span class="ar" aria-hidden="true">▼</span>
-    <button id="snd" type="button" aria-label="Bật âm thanh" aria-pressed="false">
+    <button id="snd" type="button" aria-label="Tắt âm thanh" aria-pressed="true">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 9a4.5 4.5 0 0 1 0 6"/><path class="x" d="M17 8l5 8M22 8l-5 8"/></svg>
     </button>
   </div>
@@ -544,6 +550,12 @@ body.sunk #tower .moon{opacity:.25}
 <div id="fx" aria-hidden="true"></div>
 <div id="flick" aria-hidden="true"></div>
 <div class="dr-wrap" id="doors" aria-hidden="true"><div class="dp l"></div><div class="dp r"></div></div>
+<div id="ck" role="region" aria-label="Cookie">
+  <div class="ci">
+    <p>Trang web sử dụng cookie để mang lại trải nghiệm tốt nhất cho quý khách.</p>
+    <div class="ckb"><button class="btn sm gold" type="button">Đồng ý</button><button class="btn sm ghost" type="button">Để sau</button></div>
+  </div>
+</div>
 
 <script>
 (()=>{
@@ -577,10 +589,10 @@ function announce(){
   clearTimeout(sayT);sayT=setTimeout(()=>say.classList.remove('show'),3500);
 }
 
-let ac,hum,o1,o2,soundOn=false,knockT;
+let ac,hum,o1,o2,soundOn=false,muted=false,knockT;
 function audioInit(){
   ac=new(window.AudioContext||window.webkitAudioContext)();
-  hum=ac.createGain();hum.connect(ac.destination);
+  hum=ac.createGain();hum.gain.value=0;hum.connect(ac.destination);
   [[60,.6],[120,.4]].forEach(([f,v],i)=>{
     const o=ac.createOscillator(),g=ac.createGain();
     o.type='sine';o.frequency.value=f;g.gain.value=v;o.connect(g).connect(hum);o.start();
@@ -590,7 +602,7 @@ function audioInit(){
 }
 function setHum(){
   if(!ac)return;const t=ac.currentTime;
-  hum.gain.setTargetAtTime(.03+.03*dNow,t,.3);
+  hum.gain.setTargetAtTime(.06*dNow,t,.3);
   o1.frequency.setTargetAtTime(60*(1-.2*dNow),t,.3);
   o2.frequency.setTargetAtTime(120*(1-.2*dNow),t,.3);
 }
@@ -603,7 +615,7 @@ function tone(f,t0,dur,vol){
   o.connect(g).connect(ac.destination);o.start(t0);o.stop(t0+dur+.05);
 }
 function ding(){
-  if(!soundOn)return;const t=ac.currentTime;
+  if(!soundOn||ac.state!=='running')return;const t=ac.currentTime;
   tone(659.25,t,.7,.12);tone(523.25,t+.22,.9,.12);
 }
 function knock(){
@@ -620,17 +632,27 @@ function knock(){
 }
 function nextKnock(){
   clearTimeout(knockT);if(!soundOn)return;
-  knockT=setTimeout(()=>{if(soundOn&&dNow>=.7)knock();nextKnock()},8000+Math.random()*7000);
+  knockT=setTimeout(()=>{if(soundOn&&ac.state==='running'&&dNow>=.7)knock();nextKnock()},8000+Math.random()*7000);
 }
-const snd=$('#snd');
-snd.addEventListener('click',()=>{
-  if(!ac){audioInit();soundOn=true;ac.resume()}
-  else if(soundOn){soundOn=false;ac.suspend()}
-  else{soundOn=true;ac.resume()}
-  snd.setAttribute('aria-pressed',soundOn);
-  snd.setAttribute('aria-label',soundOn?'Tắt âm thanh':'Bật âm thanh');
-  if(soundOn)nextKnock();else clearTimeout(knockT);
-});
+const snd=$('#snd'),gest=['pointerdown','keydown','touchend'];
+function setSound(on){
+  muted=!on;soundOn=on;
+  if(on){if(!ac)audioInit();ac.resume();nextKnock()}
+  else{clearTimeout(knockT);if(ac)ac.suspend()}
+  snd.setAttribute('aria-pressed',on);
+  snd.setAttribute('aria-label',on?'Tắt âm thanh':'Bật âm thanh');
+}
+function unlock(){
+  if(muted)return;
+  if(!ac){audioInit();soundOn=true;nextKnock()}
+  ac.resume().then(()=>{if(ac.state==='running')gest.forEach(g=>document.removeEventListener(g,unlock))},()=>{});
+}
+gest.forEach(g=>document.addEventListener(g,unlock));
+snd.addEventListener('click',()=>setSound(muted));
+
+const ck=$('#ck');
+new ResizeObserver(()=>root.style.setProperty('--ckh',ck.offsetHeight+'px')).observe(ck);
+ck.addEventListener('click',e=>{if(e.target.closest('button')){ck.remove();body.classList.remove('ck')}});
 
 const flick=$('#flick');
 (function loop(){

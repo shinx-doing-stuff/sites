@@ -182,7 +182,23 @@ body.deep .m.me{background:#2a1313}
 body.deep .cf{border-color:#3a2a2a}
 body.deep .cf input,body.deep .cf button{color:var(--pale)}
 body.deep .lc{background:#050303;color:var(--pale);border-color:var(--pale)}
-body.deep .cw :focus-visible{outline-color:var(--pale)}
+body.deep .cw :focus-visible,body.deep .mb:focus-visible{outline-color:var(--pale)}
+
+.mb{position:fixed;left:16px;bottom:16px;z-index:60;width:40px;height:40px;padding:0;border-radius:50%;border:1px solid rgba(31,42,55,.2);background:color-mix(in srgb,var(--card) 80%,transparent);color:var(--ink);cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px)}
+.mb svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mb .x{display:none}
+.mb.mu .x{display:block}
+.mb.mu .w{display:none}
+body.deep .mb{background:#050303;color:var(--pale);border-color:var(--pale)}
+#ck{position:fixed;z-index:65;left:0;right:0;bottom:0;background:var(--card);color:var(--ink);border-top:1px solid rgba(31,42,55,.12);box-shadow:0 -4px 18px rgba(31,28,20,.14);padding:12px 0}
+#ck .ci{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px}
+#ck p{flex:1 1 300px;font-size:.88rem;line-height:1.5}
+#ck .ckb{display:flex;gap:10px}
+#ck .btn{padding:10px 20px;font-size:.9rem}
+body.ck .cw,body.ck .mb{bottom:calc(var(--ckh,92px) + 16px)}
+body.deep #ck{background:#050303;color:var(--pale);border-color:#2a1d1d}
+body.deep #ck .btn{background:transparent;border-color:var(--pale);color:var(--pale)}
+body.deep #ck :focus-visible{outline-color:var(--pale)}
 
 .hero-art{--eyes:0;--night:0;--fig:0;--hand:0}
 body.woken .hero-art{--eyes:1;--night:1;--fig:1;--hand:1}
@@ -215,7 +231,7 @@ body.woken .ey.big{opacity:.75;transition:opacity 8s 3s}
 }
 </style>
 </head>
-<body>
+<body class="ck">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="moon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="currentColor"/><circle cx="15" cy="16" r="9" fill="#fbf7f0"/><circle cx="19" cy="13" r="8" fill="currentColor"/></symbol>
   <symbol id="room" viewBox="0 0 400 270">
@@ -449,6 +465,13 @@ body.woken .ey.big{opacity:.75;transition:opacity 8s 3s}
   </div>
   <button class="lc" id="lc" type="button" aria-label="Chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></button>
 </div>
+<button class="mb" id="mute" type="button" hidden aria-label="Tắt âm thanh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="w" d="M16.5 9a4.5 4.5 0 0 1 0 6"/><path class="x" d="M17 8l5 8M22 8l-5 8"/></svg></button>
+<div id="ck" role="region" aria-label="Cookie">
+  <div class="c ci">
+    <p>Yên Miên dùng cookie để bạn có trải nghiệm mua sắm tốt hơn.</p>
+    <div class="ckb"><button class="btn" type="button">Đồng ý</button><button class="btn alt" type="button">Để sau</button></div>
+  </div>
+</div>
 
 <script>
 (()=>{
@@ -586,9 +609,13 @@ $('#cf').onsubmit=e=>{
   enqueue(()=>dMax<.5?'Dạ em cảm ơn anh/chị, anh/chị đợi em một chút ạ.':'Suỵt. Gõ khẽ thôi ạ, nó nghe thấy đấy.');
 };
 
-let ac,mg,dr,br,timer,playing=false,idx=0;
-const N=[440,523.25,587.33,659.25,783.99,659.25,587.33,523.25],pb=$('#play');
-function playLabel(){pb.textContent=playing?'⏸ '+(dMax>=.65?'Nó vẫn đang ru':'Tắt'):'▶ Nghe thử'}
+let ac,mg,dr,br,timer,playing=false,off=false,seenGift=false,idx=0;
+const N=[440,523.25,587.33,659.25,783.99,659.25,587.33,523.25],pb=$('#play'),mb=$('#mute');
+function playLabel(){
+  pb.textContent=playing?'⏸ '+(dMax>=.65?'Nó vẫn đang ru':'Tắt'):'▶ Nghe thử';
+  mb.classList.toggle('mu',!playing);
+  mb.setAttribute('aria-label',playing?'Tắt âm thanh':'Bật âm thanh');
+}
 function note(f){
   const t=ac.currentTime,g=ac.createGain();
   g.gain.setValueAtTime(.0001,t);
@@ -604,15 +631,15 @@ function step(){
   if(!playing)return;
   dr.gain.setTargetAtTime(d*.07,ac.currentTime,.3);
   br.gain.setTargetAtTime(d>=.85?.05:0,ac.currentTime,1);
-  if(Math.random()>=d*.5)note(N[idx%8]);
+  if(ac.state==='running'&&Math.random()>=d*.5)note(N[idx%8]);
   idx++;
   timer=setTimeout(step,420+d*500);
 }
-function start(){
+function build(){
   const AC=window.AudioContext||window.webkitAudioContext;
-  if(!AC)return;
+  if(!AC)return false;
   ac=new AC();
-  mg=ac.createGain();mg.gain.setValueAtTime(0,ac.currentTime);mg.gain.linearRampToValueAtTime(.12,ac.currentTime+.3);mg.connect(ac.destination);
+  mg=ac.createGain();mg.gain.value=0;mg.connect(ac.destination);
   dr=ac.createGain();dr.gain.value=0;dr.connect(mg);
   for(const f of[55,58.3]){const o=ac.createOscillator();o.type='sine';o.frequency.value=f;o.connect(dr);o.start()}
   const nb=ac.createBuffer(1,ac.sampleRate*2,ac.sampleRate),nd=nb.getChannelData(0);
@@ -624,19 +651,42 @@ function start(){
   br=ac.createGain();br.gain.value=0;
   ns.connect(bp);bp.connect(sw);sw.connect(br);br.connect(ac.destination);
   ns.start();lfo.start();
-  playing=true;step();
+  return true;
+}
+function start(){
+  if(!ac&&!build())return;
+  clearTimeout(timer);
+  playing=true;off=false;mb.hidden=false;
+  const t=ac.currentTime;
+  mg.gain.cancelScheduledValues(t);mg.gain.setTargetAtTime(.12,t,.1);
+  ac.resume();step();playLabel();
 }
 function stop(){
   playing=false;clearTimeout(timer);
-  const c=ac;
-  mg.gain.cancelScheduledValues(c.currentTime);
-  mg.gain.setTargetAtTime(0,c.currentTime,.05);
-  br.gain.cancelScheduledValues(c.currentTime);
-  br.gain.setTargetAtTime(0,c.currentTime,.05);
-  setTimeout(()=>c.close(),500);
-  ac=null;
+  const t=ac.currentTime;
+  for(const g of[mg,dr,br]){g.gain.cancelScheduledValues(t);g.gain.setTargetAtTime(0,t,.05)}
+  setTimeout(()=>{if(!playing)ac.suspend()},400);
+  playLabel();
 }
-pb.onclick=()=>{playing?stop():start();playLabel()};
+const toggle=()=>{if(playing){off=true;stop()}else start()};
+pb.onclick=mb.onclick=toggle;
+
+const gest=['pointerdown','keydown','touchend'];
+function unlock(e){
+  if(!ac&&!build())return;
+  const own=e.target.closest&&e.target.closest('#play');
+  ac.resume().then(()=>{
+    if(ac.state!=='running')return;
+    gest.forEach(g=>document.removeEventListener(g,unlock));
+    if(seenGift&&!off&&!playing&&!own)start();
+  },()=>{});
+}
+gest.forEach(g=>document.addEventListener(g,unlock));
+once($('.gift'),.5,()=>{seenGift=true;if(ac&&ac.state==='running'&&!off&&!playing)start()});
+
+const ck=$('#ck');
+new ResizeObserver(()=>root.style.setProperty('--ckh',ck.offsetHeight+'px')).observe(ck);
+ck.addEventListener('click',e=>{if(e.target.closest('button')){ck.remove();body.classList.remove('ck')}});
 
 document.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;mouse={x:e.clientX,y:e.clientY};sched()});
 document.documentElement.addEventListener('mouseleave',()=>{mouse=null;eyes.forEach(e=>e.classList.remove('hd2'))});
