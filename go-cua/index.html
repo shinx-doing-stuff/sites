@@ -599,27 +599,69 @@ body.calling{--lift:calc(var(--shh,150px) + 8px)}
   <div class="final-in">
     <h2>ẢNH XÁC NHẬN GIAO HÀNG</h2>
     <div class="photo">
-      <svg viewBox="0 0 400 300" aria-hidden="true">
-        <defs>
-          <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#8fb4ff" stop-opacity=".5"/><stop offset="1" stop-color="#8fb4ff" stop-opacity="0"/></radialGradient>
-          <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6f0ff"/><stop offset="1" stop-color="#9dbdf5"/></linearGradient>
-          <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bcd4ff"/><stop offset=".45" stop-color="#5a78b8" stop-opacity=".55"/><stop offset="1" stop-color="#5a78b8" stop-opacity="0"/></linearGradient>
-          <filter id="blur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8"/></filter>
-        </defs>
-        <rect width="400" height="300" fill="#060709"/>
-        <rect y="176" width="400" height="124" fill="#08090c"/>
-        <ellipse cx="205" cy="132" rx="160" ry="100" fill="url(#glow)"/>
-        <rect x="136" y="92" width="138" height="80" fill="#8fb4ff" opacity=".6" filter="url(#blur)"/>
-        <rect x="140" y="96" width="130" height="72" fill="url(#scr)"/>
-        <g fill="#5d7fc4" opacity=".55"><rect x="150" y="106" width="56" height="4"/><rect x="150" y="116" width="86" height="3"/><rect x="150" y="124" width="70" height="3"/><rect x="150" y="132" width="92" height="3"/></g>
-        <path d="M118 300C120 254 158 240 190 234H220C252 240 290 254 292 300Z" fill="#030304" stroke="url(#rim)" stroke-width="1.6"/>
-        <circle cx="205" cy="208" r="26" fill="#030304" stroke="url(#rim)" stroke-width="1.6"/>
-        <rect x="188" y="228" width="34" height="12" fill="#030304"/>
-        <polygon points="0,0 36,0 24,300 0,300" fill="#000"/>
-        <polygon points="400,0 364,0 378,300 400,300" fill="#000"/>
-        <polygon points="0,0 400,0 400,12 0,12" fill="#000"/>
-        <path d="M36 0L24 300M364 0L378 300" stroke="#1b1e28" stroke-width="1.5" fill="none"/>
-      </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice"><defs>
+<radialGradient id="ph-wall" cx="268" cy="104" r="240" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#bcd6ee" stop-opacity=".8"/><stop offset=".08" stop-color="#9dbcd8" stop-opacity=".55"/><stop offset=".2" stop-color="#7595ac" stop-opacity=".25"/><stop offset=".4" stop-color="#5d7f98" stop-opacity=".1"/><stop offset=".7" stop-color="#36505a" stop-opacity=".03"/><stop offset="1" stop-color="#36505a" stop-opacity="0"/></radialGradient>
+<radialGradient id="ph-spill" cx="272" cy="186" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(272 186) scale(120 34) translate(-272 -186)"><stop offset="0" stop-color="#9dc0dc" stop-opacity=".55"/><stop offset=".5" stop-color="#6d94ae" stop-opacity=".16"/><stop offset="1" stop-color="#6d94ae" stop-opacity="0"/></radialGradient>
+<linearGradient id="ph-deskg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d282c"/><stop offset="1" stop-color="#070909"/></linearGradient>
+<linearGradient id="ph-doorg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#010202"/><stop offset=".7" stop-color="#030404"/><stop offset="1" stop-color="#141d20"/></linearGradient>
+<linearGradient id="ph-figg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#010202"/><stop offset=".6" stop-color="#020303"/><stop offset="1" stop-color="#05080b"/></linearGradient>
+<linearGradient id="ph-chairg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26343a"/><stop offset="1" stop-color="#060808"/></linearGradient>
+<radialGradient id="ph-vig" cx=".5" cy=".46" r=".72"><stop offset=".35" stop-color="#000" stop-opacity="0"/><stop offset=".75" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity=".9"/></radialGradient>
+<filter id="ph-bloom" x="-400%" y="-500%" width="900%" height="1100%"><feGaussianBlur in="SourceGraphic" stdDeviation="3.6" result="a"/><feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b"/><feGaussianBlur in="SourceGraphic" stdDeviation="22" result="c"/><feMerge><feMergeNode in="c"/><feMergeNode in="c"/><feMergeNode in="b"/><feMergeNode in="a"/></feMerge></filter>
+<filter id="ph-b45" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
+<filter id="ph-b3" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3"/></filter>
+<filter id="ph-b7" x="-30%" y="-10%" width="160%" height="120%"><feGaussianBlur stdDeviation="7"/></filter>
+<filter id="ph-fig" x="-20" y="-20" width="440" height="340" filterUnits="userSpaceOnUse"><feTurbulence type="fractalNoise" baseFrequency=".08" numOctaves="3" seed="4" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="8" xChannelSelector="R" yChannelSelector="G" result="d"/><feGaussianBlur in="d" stdDeviation="2"/></filter>
+<filter id="ph-rim" x="-20" y="-20" width="440" height="340" filterUnits="userSpaceOnUse"><feTurbulence type="fractalNoise" baseFrequency=".08" numOctaves="3" seed="4" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="8" xChannelSelector="R" yChannelSelector="G" result="d"/><feGaussianBlur in="d" stdDeviation="1.7"/></filter>
+<filter id="ph-photo" x="-20" y="-20" width="440" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feGaussianBlur in="SourceGraphic" stdDeviation="1.6 0.8" result="soft"/>
+<feComponentTransfer in="soft" result="lift"><feFuncR type="linear" slope=".9" intercept=".058"/><feFuncG type="linear" slope=".9" intercept=".078"/><feFuncB type="linear" slope=".92" intercept=".066"/></feComponentTransfer>
+<feComponentTransfer in="lift" result="post"><feFuncR type="discrete" tableValues="0.000 0.021 0.043 0.064 0.085 0.106 0.128 0.149 0.170 0.191 0.213 0.234 0.255 0.277 0.298 0.319 0.340 0.362 0.383 0.404 0.426 0.447 0.468 0.489 0.511 0.532 0.553 0.574 0.596 0.617 0.638 0.660 0.681 0.702 0.723 0.745 0.766 0.787 0.809 0.830 0.851 0.872 0.894 0.915 0.936 0.957 0.979 1.000"/><feFuncG type="discrete" tableValues="0.000 0.021 0.043 0.064 0.085 0.106 0.128 0.149 0.170 0.191 0.213 0.234 0.255 0.277 0.298 0.319 0.340 0.362 0.383 0.404 0.426 0.447 0.468 0.489 0.511 0.532 0.553 0.574 0.596 0.617 0.638 0.660 0.681 0.702 0.723 0.745 0.766 0.787 0.809 0.830 0.851 0.872 0.894 0.915 0.936 0.957 0.979 1.000"/><feFuncB type="discrete" tableValues="0.000 0.021 0.043 0.064 0.085 0.106 0.128 0.149 0.170 0.191 0.213 0.234 0.255 0.277 0.298 0.319 0.340 0.362 0.383 0.404 0.426 0.447 0.468 0.489 0.511 0.532 0.553 0.574 0.596 0.617 0.638 0.660 0.681 0.702 0.723 0.745 0.766 0.787 0.809 0.830 0.851 0.872 0.894 0.915 0.936 0.957 0.979 1.000"/></feComponentTransfer>
+<feTurbulence type="fractalNoise" baseFrequency=".014 .02" numOctaves="2" seed="11" result="bt"/>
+<feColorMatrix in="bt" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 1" result="blot"/>
+<feComposite in="post" in2="blot" operator="arithmetic" k1="0" k2="1" k3=".1" k4="-.05" result="p2"/>
+<feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="gt"/>
+<feColorMatrix in="gt" type="matrix" values="1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 0 1" result="gg"/>
+<feGaussianBlur in="gg" stdDeviation=".45" result="gs"/>
+<feComposite in="p2" in2="gs" operator="arithmetic" k1="0" k2="1" k3=".3" k4="-.15" result="p3"/>
+<feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="3" result="ct"/>
+<feColorMatrix in="ct" type="matrix" values="1.3 0 0 0 -.62  0 1.5 0 0 -.72  1.3 0 0 0 -.66  0 0 0 0 1" result="cs"/>
+<feGaussianBlur in="cs" stdDeviation=".5" result="csb"/>
+<feColorMatrix in="post" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.4 -2.4 -2.4 0 1.5" result="dm"/>
+<feComposite in="csb" in2="dm" operator="in" result="cm"/>
+<feBlend in="cm" in2="p3" mode="screen"/>
+</filter>
+</defs>
+<g filter="url(#ph-photo)">
+<g transform="translate(200 150) rotate(-2.6) scale(1.1) translate(-200 -150)">
+<rect x="-80" y="-80" width="560" height="460" fill="#0f1517"/>
+<rect x="-80" y="-80" width="560" height="460" fill="url(#ph-wall)"/>
+<path d="M60 176 L470 169 L470 380 L60 380Z" fill="url(#ph-deskg)" filter="url(#ph-b3)"/>
+<ellipse cx="272" cy="186" rx="130" ry="40" fill="url(#ph-spill)"/>
+<path d="M251 88 L293 85 L295 119 L254 122Z" fill="#06090a" opacity=".85" filter="url(#ph-b3)"/>
+<g filter="url(#ph-bloom)"><path d="M257 93 L289 91 L291 113 L259 116Z" fill="#eaf5ff"/></g>
+<path d="M254 94 C265 90 282 89 290 92 C293 100 292 110 288 115 C276 118 264 117 255 119 C252 111 252 101 254 94Z" fill="#f4faff" opacity=".85" filter="url(#ph-b45)"/>
+<g filter="url(#ph-b3)"><path d="M108 300 L111 240 C113 224 128 217 150 217 L346 221 C364 222 370 235 370 250 L374 340 L108 340Z" fill="url(#ph-chairg)"/></g>
+<path d="M111 240 C113 224 128 217 150 217 L346 221 C364 222 370 235 370 250" fill="none" stroke="#8fb4cf" stroke-width="3.5" stroke-opacity=".55" stroke-dasharray="40 8 25 6 60 10" filter="url(#ph-b3)"/>
+<g transform="translate(10 2)">
+<g filter="url(#ph-fig)">
+<path d="M166 340 L168 276 C170 252 175 230 190 218 C198 208 207 200 214 188 C218 180 217 172 219 166 C214 163 211 158 210 152 C206 152 201 145 204 139 C206 136 209 135 208 131 C205 119 209 105 221 99 C227 95 231 96 233 94 C238 90 246 93 249 98 C252 97 256 101 255 105 C262 110 266 122 265 135 C264 148 259 157 254 163 C257 167 253 172 254 178 C256 184 266 189 280 191 C296 193 308 195 320 202 C330 212 332 238 333 262 C334 285 333 310 335 340Z" fill="url(#ph-figg)"/>
+<path d="M226 99 C222 92 223 87 227 83 M236 94 C236 87 240 83 245 81" fill="none" stroke="#020303" stroke-width="1.3" stroke-linecap="round"/>
+</g>
+<g filter="url(#ph-rim)" fill="none" stroke-linecap="round">
+<path d="M249 98 C252 97 256 101 255 105 C262 110 266 122 265 135 C264 148 259 157 254 163" stroke="#8fc3f2" stroke-width="2.4" stroke-opacity=".7" stroke-dasharray="16 4 7 3 20 6 5"/>
+<path d="M280 191 C296 193 308 195 320 202 C330 209 335 224 337 240" stroke="#8fc3f2" stroke-width="3" stroke-opacity=".6" stroke-dasharray="9 5 18 4 6 9 14"/>
+<path d="M255 105 C262 110 266 122 265 135" stroke="#bfe0ff" stroke-width="1.3" stroke-opacity=".55" stroke-dasharray="5 7 11 9"/>
+</g>
+</g>
+<path d="M-80 -80 L98 -80 C106 40 96 190 118 380 L-80 380Z" fill="url(#ph-doorg)" filter="url(#ph-b7)"/>
+<path d="M98 -40 C106 60 98 200 118 340" fill="none" stroke="#3a4e57" stroke-width="9" stroke-opacity=".6" filter="url(#ph-b7)"/>
+<path d="M388 -80 L480 -80 L480 380 L384 380Z" fill="#010202" filter="url(#ph-b3)"/>
+<path d="M388 -40 L384 340" fill="none" stroke="#2c3d44" stroke-width="3.5" stroke-opacity=".6" filter="url(#ph-b3)"/>
+</g>
+<rect x="-20" y="-20" width="440" height="340" fill="url(#ph-vig)"/>
+</g></svg>
+
       <span class="stamp" id="stamp">00/00/0000 00:00:00</span>
     </div>
     <p class="sub">Chụp từ sau lưng người nhận.</p>
